@@ -1,70 +1,72 @@
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1em;
 }
 
 .header h1 {
-    color: var(--clr-h1);
-    font-size: var(--size-lg);
+  color: var(--clr-h1);
+  font-size: var(--size-lg);
 }
 
 .header-text {
-    display: none;
-    color: var(--clr-accent);
-    font-size: var(--size-sm);
-    transition: transform 0.3s, colour 0.3s;
+  display: none;
+  color: var(--clr-accent);
+  font-size: var(--size-sm);
+  transition: transform 0.3s, colour 0.3s;
 }
 
 .header-symbol {
-    color: var(--clr-accent);
-    display: block;
-    width: var(--size-lg);
-    height: var(--size-lg);
+  color: var(--clr-accent);
+  display: block;
+  width: var(--size-lg);
+  height: var(--size-lg);
 }
 
 .header a {
-    transition: transform .3s ease;
+  transition: transform .3s ease;
 }
 
 .header a:hover {
-    transform: translateY(-3px);
-    color: var(--clr-h2);
-    cursor: pointer;
+  transform: translateY(-3px);
+  color: var(--clr-h2);
+  cursor: pointer;
 }
 
 .header .btn {
-    background-color: var(--clr-accent);
-    color: var(--clr-light);
-    padding-top: 0.25em;
-    padding-top: 0.25em;
+  background-color: var(--clr-accent);
+  color: var(--clr-light);
+  font-size: var(--size-xs);
+  padding-top: 0.25em;
+  padding-top: 0.25em;
 }
 
 .header .btn:hover {
-    color: var(--clr-light);
+  color: var(--clr-light);
 }
 
-/* tiny */
-@media (max-width: 320px) {
-    .header h1 {
-        font-size: var(--size-lg);
-    }
-    
-    .header .btn {
-        font-size: var(--size-xs);
-    }
+/* i needed a stop gap when <350px because the header looked too bad */
+/* tiny usually from 320px */
+@media (max-width: 360px) {
+  .header h1 {
+    font-size: var(--size-lg);
+  }
+
+  .header .btn {
+    font-size: var(--size-xxs);
+  }
 }
 
 /* xs */
 @media (min-width: 475px) {
-    .header h1 {
-        font-size: var(--size-2xl);
-    }
-    
-    .header .btn {
-        font-size: var(--size-base);
-    }
+  .header h1 {
+    font-size: var(--size-2xl);
+  }
+
+  .header .btn {
+    font-size: var(--size-base);
+  }
 }
 
 /* sm */
@@ -72,36 +74,38 @@
 
 /* md */
 @media (min-width: 768px) {
-    .header-symbol {
-        display: none;
-    }
+  .header-symbol {
+    display: none;
+  }
 
-    .header-text {
-        display: block;
-        font-size: var(--size-lg);
-    }
+  .header-text {
+    display: block;
+    font-size: var(--size-lg);
+  }
 }
 
 /* lg */
 @media (min-width: 1024px) {
-    .header h1 {
-        font-size: var(--size-4xl);
-    }
-    
-    .header .btn, .header-text{
-        font-size: var(--size-2xl);
-    }
+  .header h1 {
+    font-size: var(--size-4xl);
+  }
+
+  .header .btn,
+  .header-text {
+    font-size: var(--size-2xl);
+  }
 }
 
 /* xl */
 @media (min-width: 1280px) {
-    .header h1 {
-        font-size: var(--size-6xl);
-    }
-    
-    .header .btn, .header-text {
-        font-size: var(--size-3xl);
-    }
+  /* .header h1 { */
+  /*     font-size: var(--size-6xl); */
+  /* } */
+
+  /* .header .btn,  */
+  .header-text {
+    font-size: var(--size-3xl);
+  }
 }
 
 /* 2xl */
