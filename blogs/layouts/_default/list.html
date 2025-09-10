@@ -1,0 +1,10 @@
+{{ define "main" }}
+<div class="generic_section container section">
+  <h1>{{ lower .Title }}</h1>
+  <ul>
+    {{ range .Pages }}
+    <li><a href="{{ .RelPermalink }}">{{ lower .Title }}</a></li>
+    {{ end }}
+  </ul>
+</div>
+{{ end }}

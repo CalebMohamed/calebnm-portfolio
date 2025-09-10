@@ -1,0 +1,59 @@
+{{/* compute path-to-root */}}
+{{ $pathtoroot := "" }}
+
+{{ if eq .Kind "page" }}
+{{ $pathtoroot = "../../../" }}
+{{ else if eq .Kind "section" }}
+{{ if .Parent }}
+{{ $pathtoroot = "../../" }}
+{{ else }}
+{{ $pathtoroot = "../" }}
+{{ end }}
+{{ end }}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  {{- partial "head.html" (dict "context" . "pathtoroot" $pathtoroot) -}}
+</head>
+
+{{/* this very goofy section gets the manifest in list for, then loops over it naming the keys and values then if the
+cache-busted key name (which is the file name lol) contain our keyword controlled in hugo.toml and has the
+corresponding suffix we add the import */}}
+
+{{/* these are hear as a fallback so that its still defined even though it wont work */}}
+{{- $jspath := "default.js" -}}
+{{- $csspath := "default.css" -}}
+
+{{- $manifest := readFile "/static/.vite/manifest.json" | transform.Unmarshal -}}
+{{- range $key, $value := $manifest -}}
+
+{{- if and (strings.Contains $key .Site.Params.srckeyword) (strings.HasSuffix $key ".js") -}}
+{{- $jspath = $value.file -}}
+{{- end -}}
+
+{{- if and (strings.Contains $key .Site.Params.srckeyword) (strings.HasSuffix $key ".css") -}}
+{{- $csspath = $value.file -}}
+{{- end -}}
+
+{{- end -}}
+
+<body>
+  <script type="module" src="{{ $pathtoroot }}{{ $jspath }}"></script>
+  <link rel="stylesheet" href="{{ $pathtoroot }}{{ $csspath }}">
+
+  <header>
+    {{- partial "header.html" (dict "context" . "pathtoroot" $pathtoroot) -}}
+  </header>
+
+  <main>
+    {{- block "main" . }}{{ end -}}
+  </main>
+
+  <footer>
+    {{- partial "footer.html" (dict "context" . "pathtoroot" $pathtoroot) -}}
+  </footer>
+</body>
+
+</html>

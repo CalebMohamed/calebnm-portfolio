@@ -1,0 +1,15 @@
+baseURL = 'https://calebmohamed.com/'
+languageCode = 'en-uk'
+title = 'caleb-mohamed'
+publishDir = "../dist"
+
+[params]
+  copyright = '2025'
+  srckeyword = 'titlehop'
+  datelayout = 'Mon, 02 Jan 2006'
+  [params.author]
+    email = 'calebnoahmohamed@gmail.com'
+    name = 'Caleb Mohamed'
+
+[permalinks]
+  blogs = '/blogs/:year/:slug/'
