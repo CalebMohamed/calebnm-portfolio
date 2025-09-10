@@ -20,6 +20,11 @@ publishDir = "../dist"
   taxonomy = []
   term = []
 
+[outputFormats]
+  [outputFormats.rss]
+  basename = 'rss'
+  path = 'feeds'
+
 [services]
   [servies.rss]
     limit = 15
