@@ -23,7 +23,8 @@
 }
 
 .generic_section p,
-.generic_section ul {
+.generic_section ul,
+.generic_section ol {
   max-width: 60ch;
   color: var(--clr-main);
   font-size: var(--size-sm);
@@ -51,6 +52,7 @@
 
   .generic_section p,
   .generic_section ul,
+  .generic_section ol,
   .generic_section .btn {
     font-size: var(--size-base);
   }
@@ -82,6 +84,7 @@
 
   .generic_section p,
   .generic_section ul,
+  .generic_section ol,
   .generic_section .btn {
     font-size: var(--size-lg);
   }
@@ -103,6 +106,7 @@
 
   .generic_section p,
   .generic_section ul,
+  .generic_section ol,
   .generic_section .btn {
     font-size: var(--size-xl);
   }

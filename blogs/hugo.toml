@@ -13,3 +13,13 @@ publishDir = "../dist"
 
 [permalinks]
   blogs = '/blogs/:year/:slug/'
+
+[outputs]
+  home = ['rss']
+  section = ['html', 'rss']
+  taxonomy = []
+  term = []
+
+[services]
+  [servies.rss]
+    limit = 15

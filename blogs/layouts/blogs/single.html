@@ -3,4 +3,7 @@
   <h1>{{ lower .Title }}</h1>
   {{ .Content }}
 </div>
+
+{{ partial "lastfive" . }}
+
 {{ end }}
