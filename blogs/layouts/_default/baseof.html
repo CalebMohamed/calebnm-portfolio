@@ -11,13 +11,6 @@
 {{ end }}
 {{ end }}
 
-<!doctype html>
-<html lang="en">
-
-<head>
-  {{- partial "head.html" (dict "context" . "pathtoroot" $pathtoroot) -}}
-</head>
-
 {{/* this very goofy section gets the manifest in list for, then loops over it naming the keys and values then if the
 cache-busted key name (which is the file name lol) contain our keyword controlled in hugo.toml and has the
 corresponding suffix we add the import */}}
@@ -39,9 +32,16 @@ corresponding suffix we add the import */}}
 
 {{- end -}}
 
+<!doctype html>
+<html lang="en">
+
+<head>
+  {{- partial "head.html" (dict "context" . "pathtoroot" $pathtoroot) -}}
+  <link rel="stylesheet" href="{{ $pathtoroot }}{{ $csspath }}">
+</head>
+
 <body>
   <script type="module" src="{{ $pathtoroot }}{{ $jspath }}"></script>
-  <link rel="stylesheet" href="{{ $pathtoroot }}{{ $csspath }}">
 
   <header>
     {{- partial "header.html" (dict "context" . "pathtoroot" $pathtoroot) -}}
