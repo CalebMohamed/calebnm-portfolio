@@ -46,6 +46,16 @@
   margin-top: 3rem;
 }
 
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.expand {
+  flex: 1;
+}
+
 .jump_up {
   --random-rotation: 5deg;
   position: relative;
