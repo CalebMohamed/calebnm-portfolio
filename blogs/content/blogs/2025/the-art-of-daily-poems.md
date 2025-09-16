@@ -27,5 +27,5 @@ Secondly, **the power of boredom**. I've developed an interesting habit of stubb
 
 Finally, **life is fuel**. I'm a firm believer that every life is fascinating. Sometimes we become blinded to that fact, but even the most mundane things like the reflections in a glass of water have such depths. I'm also blessed to have quite an exciting life, but I've dipped into the ponds of the mundane many atime. I often write my poems in the evening and use them as an excuse to reflect on the day, to pick out a scene, or even just launch off of memories into some imaginative escapade.
 
-Most importantly, I believe that there is an aspect of transcendence to all creative pursuits. There is a kind or fragility and weakness in the waiting for inspiration and it often comes unannounced and unplanned. I'm struggling to find the words so I'll leave you with this:
+I believe that there is an aspect of transcendence to all creative pursuits. There is a kind or fragility and weakness in the waiting for inspiration and it often comes unannounced and unplanned. I'm struggling to find the words so I'll leave you with this:
 All that is good comes from God. Let all the rest be my imperfections.

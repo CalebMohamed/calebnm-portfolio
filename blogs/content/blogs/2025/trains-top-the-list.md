@@ -1,6 +1,6 @@
 +++
 date = 2025-09-15
-draft = true
+draft = false
 title = "trains top the list"
 +++
 Out of all methods of transport, trains top the list. And, funnily enough, I'm on a train right now.
@@ -22,4 +22,3 @@ I also love the space it forces into a commute. I've spent my train time doing l
 Now trains (or specifically UK trains) aren't without their demerits. Frequent delays, and climbing prices do challenge its supremacy. Hopefully, I'll see the UK sort out its insane train system in my lifetime.
 
 That's all for now.
-
