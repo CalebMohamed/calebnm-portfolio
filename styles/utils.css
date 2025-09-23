@@ -30,7 +30,7 @@
 
 .btn:hover {
   transform: translateY(-3px);
-  background-color: var(--clr-h2);
+  background-color: var(--clr-accent3);
 }
 
 .container {
@@ -40,6 +40,10 @@
   padding-left: 0.5em;
   padding-right: 0.5em;
   /* border: 1px solid red; */
+}
+
+.container.wide {
+  width: 100%;
 }
 
 .section {
@@ -73,7 +77,7 @@
 }
 
 .accented:hover {
-  color: var(--clr-fun);
+  color: var(--clr-accent2);
 }
 
 
@@ -118,4 +122,8 @@
   .container {
     max-width: 1536px;
   }
+}
+
+.container.wide {
+  max-width: none;
 }

@@ -30,7 +30,7 @@
 
 .header a:hover {
   transform: translateY(-3px);
-  color: var(--clr-h2);
+  color: var(--clr-accent3);
   cursor: pointer;
 }
 

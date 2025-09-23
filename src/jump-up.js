@@ -18,7 +18,7 @@ function convertHeadingsToSpans() {
             // adds in invisible i's for the spaces as the spaces are ignored
             if (char == ' '){
                 newSpan.textContent = 'i';
-                newSpan.style.color = 'var(--clr-bg)';
+                newSpan.style.visibility = 'hidden';
             } else {
                 newSpan.textContent = char;
             }

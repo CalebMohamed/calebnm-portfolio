@@ -20,7 +20,7 @@
 }
 
 .hero h2 {
-  color: var(--clr-h2);
+  color: var(--clr-accent);
   font-size: var(--size-lg);
 }
 
@@ -46,7 +46,7 @@
   background-color: var(--clr-accent);
   color: var(--clr-bg);
   border-radius: 8px;
-  --clr-fun: var(--clr-h2);
+  --clr-svg: var(--clr-accent3);
   transition: padding .3s ease;
 }
 
@@ -64,7 +64,7 @@
 
 .hero .decorative_square.left:hover,
 .hero .decorative_square.right:hover {
-  color: var(--clr-fun);
+  color: var(--clr-svg);
   padding: 0.25em 0.25em;
 }
 
@@ -99,12 +99,12 @@
 @keyframes accent_on_flip {
   0% {
     background-color: var(--clr-accent);
-    --clr-fun: var(--clr-h2)
+    --clr-svg: var(--clr-accent3)
   }
 
   50% {
-    background-color: var(--clr-h2);
-    --clr-fun: var(--clr-accent)
+    background-color: var(--clr-accent3);
+    --clr-svg: var(--clr-accent)
   }
 }
 

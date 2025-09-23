@@ -1,41 +1,76 @@
 .home {
   position: relative;
   background-color: var(--clr-bg);
-  border-radius: 16px;
+  /* border-radius: 16px; */
   padding-top: 1em;
   padding-bottom: 1em;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: left;
   gap: 1rem;
   margin-top: 2rem;
   transition: background-color 0.5s;
 }
 
+.landing-words {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: 1rem;
+}
+
+.seg1,
+.seg2,
+.seg3,
+.seg4,
+.seg5 {
+  display: none;
+}
+
 .home h1 {
   color: var(--clr-h1);
   font-size: var(--size-3xl);
+  margin-top: 5rem;
   margin-bottom: -1rem;
+  margin-left: 1rem;
 }
 
 .home h2 {
-  color: var(--clr-h2);
+  color: var(--clr-accent);
   font-size: var(--size-lg);
+  margin-left: 1rem;
 }
 
 .home p {
   max-width: 30ch;
   color: var(--clr-main);
   font-size: var(--size-sm);
-  margin: 0 auto;
-  text-align: center;
+  /* margin-left: 2rem; */
+  margin-left: 1rem;
+  text-align: left;
 }
 
 .home .btn {
   background-color: var(--clr-accent);
   font-size: var(--size-sm);
   margin: 0 auto;
+}
+
+.home .cycle-icon {
+  height: calc(var(--size-3xl) + 1rem);
+  width: calc(var(--size-3xl) + 1rem);
+  padding: 0.25rem;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: auto;
+  margin-bottom: 1em;
+  color: var(--clr-h1);
+  /* background-color: red; */
+  cursor: pointer;
+}
+
+.home .cycle-icon:hover {
+  color: var(--clr-accent2);
 }
 
 /* xs */
@@ -55,6 +90,11 @@
   .home p,
   .home .btn {
     font-size: var(--size-base);
+  }
+
+  .home .cycle-icon {
+    height: calc(var(--size-4xl) + 1rem);
+    width: calc(var(--size-4xl) + 1rem);
   }
 }
 
@@ -78,6 +118,11 @@
   .home .btn {
     font-size: var(--size-lg);
   }
+
+  .home .cycle-icon {
+    height: calc(var(--size-6xl) + 1rem);
+    width: calc(var(--size-6xl) + 1rem);
+  }
 }
 
 /* xl */
@@ -97,6 +142,11 @@
   .home p,
   .home .btn {
     font-size: var(--size-xl);
+  }
+
+  .home .cycle-icon {
+    height: calc(var(--size-8xl) + 1rem);
+    width: calc(var(--size-8xl) + 1rem);
   }
 }
 

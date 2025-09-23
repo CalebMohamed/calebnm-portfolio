@@ -5,7 +5,7 @@ publishDir = "../dist"
 
 [params]
   copyright = '2025'
-  srckeyword = 'titlehop'
+  srckeyword = 'jump-up'
   datelayout = 'Mon, 02 Jan 2006'
   [params.author]
     email = 'calebnoahmohamed@gmail.com'

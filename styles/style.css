@@ -4,21 +4,38 @@
   --clr-dark: #020617;
   --clr-dmain: #94a3b8;
   --clr-dh1: #f8fafc;
-  --clr-dh2: #e11d48;
   /* light mode */
   --clr-light: #f8fafc;
   --clr-lmain: #475569;
   --clr-lh1: #1e293b;
-  --clr-lh2: #e11d48;
-
-  /* rose: rgb(225, 29, 72) */
 
   --clr-bg: var(--clr-dark);
   --clr-main: var(--clr-dmain);
   --clr-h1: var(--clr-dh1);
-  --clr-h2: var(--clr-dh2);
-  --clr-accent: #14b8a6;
-  --clr-fun: #14b8a6;
+  --clr-h2: var(--clr-base-accent);
+  --clr-accent: var(--clr-base-accent);
+  --clr-accent2: var(--clr-base-water);
+  --clr-accent3: #a6a09b;
+
+  /* color schemes all 600, 200 */
+  /* base rose */
+  --clr-base-accent: #ec003f;
+  --clr-base-water: #ffccd3;
+  /* poems lime */
+  --clr-poem-accent: #5ea500;
+  --clr-poem-water: #d8f999;
+  /* blogs cyan */
+  --clr-blog-accent: #0092b8;
+  --clr-blog-water: #a2f4fd;
+  /* games amber */
+  --clr-game-accent: #e17100;
+  --clr-game-water: #fee685;
+  /* computers green */
+  --clr-comp-accent: #00a63e;
+  --clr-comp-water: #b9f8cf;
+  /* work blue */
+  --clr-work-accent: #155dfc;
+  --clr-work-water: #bedbff;
 
   /* sizes */
   --size-xxs: 0.5rem;
@@ -95,6 +112,8 @@ strong {
     --clr-bg: var(--clr-light);
     --clr-main: var(--clr-lmain);
     --clr-h1: var(--clr-lh1);
-    --clr-h2: var(--clr-lh2);
+    --clr-h2: var(--clr-base-accent);
+    --clr-accent: var(--clr-base-water);
+    --clr-accent2: var(--clr-base-accent);
   }
 }
