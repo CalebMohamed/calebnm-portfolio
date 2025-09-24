@@ -12,29 +12,29 @@
   --clr-bg: var(--clr-dark);
   --clr-main: var(--clr-dmain);
   --clr-h1: var(--clr-dh1);
-  --clr-h2: var(--clr-base-accent);
-  --clr-accent: var(--clr-base-accent);
+  --clr-h2: var(--clr-base-blood);
+  --clr-accent: var(--clr-base-blood);
   --clr-accent2: var(--clr-base-water);
   --clr-accent3: #a6a09b;
 
   /* color schemes all 600, 200 */
   /* base rose */
-  --clr-base-accent: #ec003f;
+  --clr-base-blood: #ec003f;
   --clr-base-water: #ffccd3;
   /* poems lime */
-  --clr-poem-accent: #5ea500;
+  --clr-poem-blood: #5ea500;
   --clr-poem-water: #d8f999;
   /* blogs cyan */
-  --clr-blog-accent: #0092b8;
+  --clr-blog-blood: #0092b8;
   --clr-blog-water: #a2f4fd;
   /* games amber */
-  --clr-game-accent: #e17100;
+  --clr-game-blood: #e17100;
   --clr-game-water: #fee685;
   /* computers green */
-  --clr-comp-accent: #00a63e;
+  --clr-comp-blood: #00a63e;
   --clr-comp-water: #b9f8cf;
   /* work blue */
-  --clr-work-accent: #155dfc;
+  --clr-work-blood: #155dfc;
   --clr-work-water: #bedbff;
 
   /* sizes */
@@ -102,18 +102,22 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  color: var(--clr-accent3);
+}
+
 strong {
-  color: var(--clr-h2);
+  color: var(--clr-accent);
   font-weight: bolder;
 }
 
 @media (prefers-color-scheme: light) {
+
+  /* @media (prefers-color-scheme: dark) { */
   :root {
     --clr-bg: var(--clr-light);
     --clr-main: var(--clr-lmain);
     --clr-h1: var(--clr-lh1);
-    --clr-h2: var(--clr-base-accent);
-    --clr-accent: var(--clr-base-water);
-    --clr-accent2: var(--clr-base-accent);
+    --clr-h2: var(--clr-base-blood);
   }
 }

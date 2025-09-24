@@ -14,18 +14,18 @@ const home = document.querySelector('.home');
 // gets all the colors for the switching on cycle rotate
 const styles = getComputedStyle(root);
 const clr_bg = styles.getPropertyValue('--clr-bg').trim();
-const base_acc1 = styles.getPropertyValue('--clr-base-accent').trim();
-const base_acc2 = styles.getPropertyValue('--clr-base-water').trim();
-const poem_acc1 = styles.getPropertyValue('--clr-poem-accent').trim();
-const poem_acc2 = styles.getPropertyValue('--clr-poem-water').trim();
-const blog_acc1 = styles.getPropertyValue('--clr-blog-accent').trim();
-const blog_acc2 = styles.getPropertyValue('--clr-blog-water').trim();
-const comp_acc1 = styles.getPropertyValue('--clr-comp-accent').trim();
-const comp_acc2 = styles.getPropertyValue('--clr-comp-water').trim();
-const work_acc1 = styles.getPropertyValue('--clr-work-accent').trim();
-const work_acc2 = styles.getPropertyValue('--clr-work-water').trim();
-const game_acc1 = styles.getPropertyValue('--clr-game-accent').trim();
-const game_acc2 = styles.getPropertyValue('--clr-game-water').trim();
+const base_blood = styles.getPropertyValue('--clr-base-blood').trim();
+const base_water = styles.getPropertyValue('--clr-base-water').trim();
+const poem_blood = styles.getPropertyValue('--clr-poem-blood').trim();
+const poem_water = styles.getPropertyValue('--clr-poem-water').trim();
+const blog_blood = styles.getPropertyValue('--clr-blog-blood').trim();
+const blog_water = styles.getPropertyValue('--clr-blog-water').trim();
+const comp_blood = styles.getPropertyValue('--clr-comp-blood').trim();
+const comp_water = styles.getPropertyValue('--clr-comp-water').trim();
+const work_blood = styles.getPropertyValue('--clr-work-blood').trim();
+const work_water = styles.getPropertyValue('--clr-work-water').trim();
+const game_blood = styles.getPropertyValue('--clr-game-blood').trim();
+const game_water = styles.getPropertyValue('--clr-game-water').trim();
 
 let dragging = false;
 let startAngle = 0;
@@ -39,6 +39,7 @@ let segments = [];
 for (let i = 0; i < segNo; i++) {
   segments.push(home.querySelector(`.seg${i}`));
 }
+segments[currentSegment].classList.add('active');
 
 const cycle = home.querySelector('.cycle-icon');
 
@@ -54,15 +55,8 @@ function closestNotch(angle) {
   const tp = 2 * Math.PI;
   angle = angle % tp;
   if (angle < 0) { angle += tp; }
-  return Math.round(segNo*angle / (2*Math.PI));
+  return Math.round(segNo*angle / (2*Math.PI)) % segNo;
 }
-
-// function atIthNotch(i, angle) {
-//   const tp = 2 * Math.PI;
-//   let a = angle % tp;
-//   if (a < 0) { a += tp; }
-//   return Math.abs(i*segmentAngle - a) <= tol;
-// }
 
 // mousedown starts dragging process, and stores the original
 // angle so that new drags add to the starting transform
@@ -74,40 +68,40 @@ cycle.addEventListener('mousedown', e => {
 
 // on mouseup the dragging stops
 window.addEventListener('mouseup', () => {
+  if (!dragging) return;
   dragging = false
 
-  const nextSegment = closestNotch(currentAngle);
-  // hides current landing text and shows next
-  segments[currentSegment].style.display = 'none';
-  segments[nextSegment].style.display = 'flex';
-  // then updates the current segment
-  currentSegment = nextSegment;
+  // updates the segment and switches which landing is displayed
+  currentSegment = closestNotch(currentAngle);
+  segments.forEach(div => div.classList.remove('active'));
+  segments[currentSegment].classList.add('active');
+
   // then updates the color variables and clicks the cycle
   // to the correct location
   switch (currentSegment) {
     case 0:
-      home.style.setProperty('--clr-accent', base_acc1);
-      home.style.setProperty('--clr-accent2', base_acc2);
+      home.style.setProperty('--clr-accent', base_blood);
+      home.style.setProperty('--clr-accent2', base_water);
     break;
     case 1:
-      home.style.setProperty('--clr-accent', poem_acc1);
-      home.style.setProperty('--clr-accent2', poem_acc2);
+      home.style.setProperty('--clr-accent', poem_blood);
+      home.style.setProperty('--clr-accent2', poem_water);
     break;
     case 2:
-      home.style.setProperty('--clr-accent', blog_acc1);
-      home.style.setProperty('--clr-accent2', blog_acc2);
+      home.style.setProperty('--clr-accent', blog_blood);
+      home.style.setProperty('--clr-accent2', blog_water);
     break;
     case 3:
-      home.style.setProperty('--clr-accent', comp_acc1);
-      home.style.setProperty('--clr-accent2', comp_acc2);
+      home.style.setProperty('--clr-accent', comp_blood);
+      home.style.setProperty('--clr-accent2', comp_water);
     break;
     case 4:
-      home.style.setProperty('--clr-accent', work_acc1);
-      home.style.setProperty('--clr-accent2', work_acc2);
+      home.style.setProperty('--clr-accent', work_blood);
+      home.style.setProperty('--clr-accent2', work_water);
     break;
     case 5:
-      home.style.setProperty('--clr-accent', game_acc1);
-      home.style.setProperty('--clr-accent2', game_acc2);
+      home.style.setProperty('--clr-accent', game_blood);
+      home.style.setProperty('--clr-accent2', game_water);
     break;
   }
   currentAngle = currentSegment * segmentAngle;

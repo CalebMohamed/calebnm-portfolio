@@ -28,9 +28,11 @@
   transition: transform 0.3s, background-colour 0.3s;
 }
 
+
 .btn:hover {
   transform: translateY(-3px);
   background-color: var(--clr-accent3);
+  color: var(--clr-accent);
 }
 
 .container {

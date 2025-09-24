@@ -17,7 +17,7 @@
 
 .footer-content a:hover {
   font-weight: bold;
-  color: var(--clr-accent);
+  color: var(--clr-accent2);
   cursor: pointer;
 }
 
