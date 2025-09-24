@@ -1,0 +1,45 @@
+.linkstack {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.container.linkstack {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.linkstack div {
+  position: relative;
+}
+
+.linkstack h1,
+.linkstack h2,
+.linkstack p {
+  color: var(--clr-h1);
+  background-color: var(--clr-accent);
+  padding-left: 2rem;
+}
+
+.linkstack p {
+  padding-bottom: 0.5rem;
+}
+
+.linkstack .link-arrow {
+  display: inline-block;
+  text-decoration: none;
+  position: absolute;
+  color: var(--clr-h1);
+  height: 2rem;
+  width: 2rem;
+  top: calc(50% - 1rem);
+  left: 15rem;
+  z-index: 1;
+  transform: translateX(0px);
+  transition: transform 0.2s;
+}
+
+.linkstack .link-arrow:hover {
+  color: var(--clr-accent2);
+  transform: translateX(8px);
+}

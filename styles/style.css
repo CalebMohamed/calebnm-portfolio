@@ -27,15 +27,18 @@
   /* blogs cyan */
   --clr-blog-blood: #0092b8;
   --clr-blog-water: #a2f4fd;
-  /* games amber */
-  --clr-game-blood: #e17100;
-  --clr-game-water: #fee685;
   /* computers green */
   --clr-comp-blood: #00a63e;
   --clr-comp-water: #b9f8cf;
   /* work blue */
   --clr-work-blood: #155dfc;
   --clr-work-water: #bedbff;
+  /* games amber */
+  --clr-game-blood: #e17100;
+  --clr-game-water: #fee685;
+  /* sitemap fuchsia */
+  --clr-slash-blood: #c800de;
+  --clr-slash-water: #f6cfff;
 
   /* sizes */
   --size-xxs: 0.5rem;

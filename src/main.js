@@ -18,3 +18,7 @@ window.onload = function() {
     JU.convertHeadingsToSpans();
     JU.initialiseJumpUpRotations();
 }
+
+window.addEventListener('resize', () => {
+  LH.updateHeadingWidths(ltexts, lheadings);
+});
