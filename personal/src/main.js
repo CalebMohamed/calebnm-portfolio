@@ -6,4 +6,9 @@ import '../../styles/components/display_cards.css'
 import '../../styles/components/header.css'
 import '../../styles/components/footer.css'
 import '../../styles/utils.css'
-import '../../src/jump-up.js'
+import * as JU from '../../src/jump-up.js'
+
+window.onload = function() {
+    JU.convertHeadingsToSpans();
+    JU.initialiseJumpUpRotations();
+}

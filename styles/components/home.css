@@ -21,7 +21,7 @@
   pointer-events: none;
   height: 0;
   overflow: hidden;
-  transition: opacity 0.5s, transform 0.5s, height 0.5s;
+  transition: opacity .5s, transform .5s, height .5s;
 }
 
 .landing-words.active {
@@ -34,6 +34,7 @@
 .home h1 {
   --original-width: 5em;
   --size: var(--size-3xl);
+  display: inline-block;
   position: relative;
   color: var(--clr-h1);
   font-size: var(--size-3xl);
@@ -47,9 +48,9 @@
   content: "";
   position: absolute;
   width: var(--original-width);
-  height: calc(var(--size) * 0.4);
+  height: calc(var(--size) * .4);
   border-radius: 4px;
-  top: calc(var(--size) * 0.75);
+  top: calc(var(--size) * .75);
   left: calc(var(--size));
   background-color: var(--clr-accent);
   z-index: 0;
@@ -68,10 +69,10 @@
   content: "";
   position: absolute;
   width: var(--original-width);
-  height: calc(var(--size) * 0.4);
+  height: calc(var(--size) * .4);
   border-radius: 4px;
-  top: calc(var(--size) * 0.875);
-  left: calc(var(--size) * 0.5);
+  top: calc(var(--size) * .875);
+  left: calc(var(--size) * .5);
   background-color: var(--clr-accent2);
   z-index: 0;
 }
@@ -85,7 +86,7 @@
 }
 
 .home strong {
-  transition: color 0.2s;
+  transition: color .2s;
 }
 
 .home .btn {
@@ -97,7 +98,7 @@
 .home .cycle-icon {
   height: calc(var(--size-3xl) + 1rem);
   width: calc(var(--size-3xl) + 1rem);
-  padding: 0.25rem;
+  padding: .25rem;
   border-radius: 50%;
   margin: 0 auto;
   margin-top: auto;
@@ -105,16 +106,13 @@
   color: var(--clr-h1);
   /* background-color: red; */
   cursor: pointer;
-}
-
-.home .cycle-icon:hover {
-  color: var(--clr-accent2);
+  transition: color .2s;
 }
 
 .home .decorative_square {
   position: absolute;
   border-radius: 8px;
-  padding: 0.5em 0.5em;
+  padding: .5em .5em;
   background-color: var(--clr-accent);
   color: var(--clr-accent2);
   transition: padding .3s ease;
@@ -123,7 +121,7 @@
 
 .home .decorative_square:hover {
   background-color: var(--clr-bg);
-  padding: 0.25em 0.25em;
+  padding: .25em .25em;
 }
 
 .home .dis-one {
@@ -167,23 +165,23 @@
 
 @keyframes rot-one {
   0% {
-    transform: rotate3d(1, 0.5, 0, 0deg);
+    transform: rotate3d(1, .5, 0, 0deg);
   }
 
   25% {
-    transform: rotate3d(1, 0.5, 0, 180deg);
+    transform: rotate3d(1, .5, 0, 180deg);
   }
 
   50% {
-    transform: rotate3d(1, 0.5, 0, 360deg);
+    transform: rotate3d(1, .5, 0, 360deg);
   }
 
   75% {
-    transform: rotate3d(0.3, 1, 0, 180deg);
+    transform: rotate3d(.3, 1, 0, 180deg);
   }
 
   100% {
-    transform: rotate3d(0.3, 1, 0, 360deg);
+    transform: rotate3d(.3, 1, 0, 360deg);
   }
 }
 
