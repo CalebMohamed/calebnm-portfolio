@@ -8,10 +8,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         home: path.resolve(__dirname, './index.html'),
-        newhome: path.resolve(__dirname, './newhome/index.html'),
         personal: path.resolve(__dirname, './personal/index.html'),
-        professional: path.resolve(__dirname, './professional/index.html'),
-        forums: path.resolve(__dirname, './forums/index.html'),
+        about: path.resolve(__dirname, './about/index.html'),
       }
     }
   }
