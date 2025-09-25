@@ -3,16 +3,16 @@ import obfuscatorPlugin from 'vite-plugin-javascript-obfuscator'
 import path from 'path'
 
 export default defineConfig({
-  // plugins: [
-  //     obfuscatorPlugin({
-  //       options: {
-  //         // your javascript-obfuscator options
-  //         compact: true,
-  //         controlFlowFlattening: false,
-  //         // ...  [See more options](https://github.com/javascript-obfuscator/javascript-obfuscator)
-  //       },
-  //     }),
-  //   ],
+  plugins: [
+      obfuscatorPlugin({
+        options: {
+          // your javascript-obfuscator options
+          compact: true,
+          controlFlowFlattening: false,
+          // ...  [See more options](https://github.com/javascript-obfuscator/javascript-obfuscator)
+        },
+      }),
+    ],
   build: {
     manifest: true,
     outDir: 'blogs/static',
