@@ -3,16 +3,16 @@ import obfuscatorPlugin from 'vite-plugin-javascript-obfuscator'
 import path from 'path'
 
 export default defineConfig({
-  plugins: [
-      obfuscatorPlugin({
-        options: {
-          // your javascript-obfuscator options
-          compact: true,
-          controlFlowFlattening: false,
-          // ...  [See more options](https://github.com/javascript-obfuscator/javascript-obfuscator)
-        },
-      }),
-    ],
+  // plugins: [
+  //     obfuscatorPlugin({
+  //       options: {
+  //         // your javascript-obfuscator options
+  //         compact: true,
+  //         controlFlowFlattening: false,
+  //         // ...  [See more options](https://github.com/javascript-obfuscator/javascript-obfuscator)
+  //       },
+  //     }),
+  //   ],
   build: {
     manifest: true,
     outDir: 'blogs/static',
@@ -26,7 +26,7 @@ export default defineConfig({
         work: path.resolve(__dirname, './work/index.html'),
         games: path.resolve(__dirname, './games/index.html'),
         slashes: path.resolve(__dirname, './slashes/index.html'),
-        blogstyle: path.resolve(__dirname, './blog-style/index.html'),
+        blogstyle: path.resolve(__dirname, './blogstyle/index.html'),
       }
     }
   }

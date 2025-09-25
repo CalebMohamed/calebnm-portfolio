@@ -2,3 +2,17 @@
 {{- $csspath = "" -}}
 <script type="module" src="{{ block " pathtoroot" . }}{{ end }}/{{ $jspath }}"></script>
 <link rel="stylesheet" href="{{ block " pathtoroot" . }}{{ end }}/{{ $csspath }}">
+
+{{/* i never even needed to get to the root anyway T-T*/}}
+{{/* compute path-to-root */}}
+{{ $pathtoroot := "" }}
+
+{{ if eq .Kind "page" }}
+{{ $pathtoroot = "../../../" }}
+{{ else if eq .Kind "section" }}
+{{ if .Parent }}
+{{ $pathtoroot = "../../" }}
+{{ else }}
+{{ $pathtoroot = "../" }}
+{{ end }}
+{{ end }}

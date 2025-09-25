@@ -1,32 +1,23 @@
-{{/* compute path-to-root */}}
-{{ $pathtoroot := "" }}
-
-{{ if eq .Kind "page" }}
-{{ $pathtoroot = "../../../" }}
-{{ else if eq .Kind "section" }}
-{{ if .Parent }}
-{{ $pathtoroot = "../../" }}
-{{ else }}
-{{ $pathtoroot = "../" }}
-{{ end }}
-{{ end }}
-
 {{/* this very goofy section gets the manifest in list for, then loops over it naming the keys and values then if the
 cache-busted key name (which is the file name lol) contain our keyword controlled in hugo.toml and has the
 corresponding suffix we add the import */}}
 
-{{/* these are hear as a fallback so that its still defined even though it wont work */}}
+{{/* these are here as a fallback so that its still defined even though it wont work */}}
 {{- $jspath := "default.js" -}}
-{{- $csspath := "default.css" -}}
+{{- $importpaths := slice -}}
+{{- $csspath := "default.js" -}}
+
+{{- $blogkey := .Site.Params.blogkey -}}
+{{- $csskey := .Site.Params.csskey -}}
 
 {{- $manifest := readFile "/static/.vite/manifest.json" | transform.Unmarshal -}}
 {{- range $key, $value := $manifest -}}
 
-{{- if and (strings.Contains $key .Site.Params.jskeyword) (strings.HasSuffix $key ".js") -}}
+{{/* this weirdly needs to end in html since we are hooking into the blog-style index page to get the dependencies */}}
+{{- if and (strings.Contains $key $blogkey) (strings.HasSuffix $key ".html") -}}
 {{- $jspath = $value.file -}}
-{{- end -}}
-
-{{- if and (strings.Contains $key .Site.Params.csskeyword) (strings.HasSuffix $key ".css") -}}
+{{- $importpaths = $value.imports -}}
+{{- else if and (strings.Contains $key $csskey) (strings.HasSuffix $key ".css") -}}
 {{- $csspath = $value.file -}}
 {{- end -}}
 
@@ -36,15 +27,21 @@ corresponding suffix we add the import */}}
 <html lang="en">
 
 <head>
-  {{- partial "head.html" (dict "context" . "pathtoroot" $pathtoroot) -}}
-  <link rel="stylesheet" href="{{ $pathtoroot }}{{ $csspath }}">
+  {{- partial "head.html" . -}}
+  <script type="module" crossorigin src="/{{ $jspath }}"></script>
+  <link rel="modulepreload" crossorigin href="/assets/{{ strings.TrimPrefix " _" (index $importpaths 0) }}">
+  <link rel="modulepreload" crossorigin href="/assets/{{ strings.TrimPrefix " _" (index $importpaths 1) }}">
+  <link rel="stylesheet" href="/{{ $csspath }}">
 </head>
 
 <body>
-  <script type="module" src="{{ $pathtoroot }}{{ $jspath }}"></script>
+  <!-- <p>{{ $jspath }}</p> -->
+  <!-- <p>{{ index $importpaths 0 }}</p> -->
+  <!-- <p>{{ index $importpaths 1 }}</p> -->
+  <!-- <p>{{ $csspath }}</p> -->
 
   <header>
-    {{- partial "header.html" (dict "context" . "pathtoroot" $pathtoroot) -}}
+    {{- partial "header.html" . -}}
   </header>
 
   <main>
@@ -52,7 +49,8 @@ corresponding suffix we add the import */}}
   </main>
 
   <footer>
-    {{- partial "footer.html" (dict "context" . "pathtoroot" $pathtoroot) -}}
+    {{- block "linkstack" . }}{{ end -}}
+    {{- partial "footer.html" . -}}
   </footer>
 </body>
 

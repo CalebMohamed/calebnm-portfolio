@@ -1,8 +1,8 @@
-<div class="footer container wide section">
+<div class="footer container wide">
   <div class="footer-content container">
-    <a href="mailto:{{ .context.Site.Params.author.email }}">email me at {{ .context.Site.Params.author.email }}</a>
-    <p>© {{ .context.Site.Params.copyright }} {{ .context.Site.Params.author.name }}</p>
-    {{ $layout := .context.Site.Params.datelayout }}
-    <p>last modified {{ .context.Site.Lastmod.Format $layout }}</p>
+    <a href="mailto:{{ .Site.Params.author.email }}">email me at {{ .Site.Params.author.email }}</a>
+    <p>© {{ .Site.Params.copyright }} {{ .Site.Params.author.name }}</p>
+    {{ $layout := .Site.Params.datelayout }}
+    <p>last modified {{ .Site.Lastmod.Format $layout }}</p>
   </div>
 </div>
