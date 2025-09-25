@@ -109,6 +109,28 @@
   transition: color .2s;
 }
 
+.home .left-icon,
+.home .right-icon {
+  position: absolute;
+  height: 2rem;
+  width: 2rem;
+  bottom: 2rem;
+  color: var(--clr-h1);
+}
+
+.home .left-icon {
+  left: 1rem;
+}
+
+.home .right-icon {
+  left: 3rem;
+}
+
+.home .left-icon:hover,
+.home .right-icon:hover {
+  color: var(--clr-accent2);
+}
+
 .home .decorative_square {
   position: absolute;
   border-radius: 8px;

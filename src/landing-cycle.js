@@ -19,6 +19,8 @@ const game_water = styles.getPropertyValue('--clr-game-water').trim();
 
 // variables for the selector behaviour
 const cycle = home.querySelector('.cycle-icon');
+const left = home.querySelector('.left-icon');
+const right = home.querySelector('.right-icon');
 let dragging = false;
 let startAngle = 0;
 let currentAngle = 0;
@@ -70,9 +72,7 @@ function endSelection() {
   dragging = false;
   cycle.style.color = 'var(--clr-h1)';
   setSegment(closestNotch(currentAngle));
-  // clicks the segment into place
-  currentAngle = currentSegment * segmentAngle;
-  cycle.style.transform = `rotate(${currentAngle}rad)`;
+  snapToSegment(currentSegment);
 }
 
 function setSegment(seg) {
@@ -81,6 +81,11 @@ function setSegment(seg) {
   segments.forEach(div => div.classList.remove('active'));
   segments[currentSegment].classList.add('active');
   setSegmentColors(currentSegment);
+}
+
+function snapToSegment(seg) {
+  currentAngle = seg * segmentAngle;
+  cycle.style.transform = `rotate(${currentAngle}rad)`;
 }
 
 function setSegmentColors(seg) {
@@ -115,6 +120,17 @@ function setSegmentColors(seg) {
 // on drag start, start selection
 cycle.addEventListener('mousedown', e => startSelection(e));
 cycle.addEventListener('touchstart', e => startSelection(e.touches[0]));
+
+// on click on the arrows go to next segment
+left.addEventListener('click', () => {
+  setSegment((currentSegment - 1 + segNo) % segNo);
+  snapToSegment(currentSegment);
+});
+
+right.addEventListener('click', () => {
+  setSegment((currentSegment + 1) % segNo);
+  snapToSegment(currentSegment);
+});
 
 // on drag end, end selection
 window.addEventListener('mouseup', () => {
