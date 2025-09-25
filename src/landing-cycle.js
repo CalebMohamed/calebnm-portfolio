@@ -153,4 +153,4 @@ window.addEventListener('touchmove', e => {
   e.preventDefault();
   updateSelection(e.touches[0]);
   setSegment(closestNotch(currentAngle));
-});
+}, { passive: false });
