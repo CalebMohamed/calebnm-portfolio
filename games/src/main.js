@@ -8,10 +8,8 @@ import '../../styles/components/footer.css'
 import '../../styles/utils.css'
 import '../../src/linkstack.js'
 import * as JU from '../../src/jump-up.js'
-import * as CM from '../../src/colorme.js'
 
 window.onload = function() {
-    CM.colorme('game');
     JU.convertHeadingsToSpans();
     JU.initialiseJumpUpRotations();
 }

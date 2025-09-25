@@ -24,13 +24,14 @@ corresponding suffix we add the import */}}
 {{- end -}}
 
 <!doctype html>
-<html lang="en">
+<html lang="en" data-type='{{- block "type" . -}}{{- end -}}'>
 
 <head>
   {{- partial "head.html" . -}}
   <script type="module" crossorigin src="/{{ $jspath }}"></script>
-  <link rel="modulepreload" crossorigin href="/assets/{{ strings.TrimPrefix " _" (index $importpaths 0) }}">
-  <link rel="modulepreload" crossorigin href="/assets/{{ strings.TrimPrefix " _" (index $importpaths 1) }}">
+  {{- range $i := seq (len $importpaths) -}}
+  <link rel="modulepreload" crossorigin href='/assets/{{ strings.TrimPrefix "_" (index $importpaths (sub $i 1)) }}'>
+  {{- end -}}
   <link rel="stylesheet" href="/{{ $csspath }}">
 </head>
 

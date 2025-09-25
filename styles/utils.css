@@ -82,8 +82,6 @@
   color: var(--clr-accent2);
 }
 
-
-
 /* xs */
 @media (min-width: 475px) {
   .container {

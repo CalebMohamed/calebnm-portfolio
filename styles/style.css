@@ -124,3 +124,36 @@ strong {
     --clr-h2: var(--clr-base-blood);
   }
 }
+
+/* the default */
+/* html[data-type="base"] {} */
+
+html[data-type="poem"] {
+  --clr-accent: var(--clr-poem-blood);
+  --clr-accent2: var(--clr-poem-water);
+}
+
+html[data-type="blog"] {
+  --clr-accent: var(--clr-blog-blood);
+  --clr-accent2: var(--clr-blog-water);
+}
+
+html[data-type="comp"] {
+  --clr-accent: var(--clr-comp-blood);
+  --clr-accent2: var(--clr-comp-water);
+}
+
+html[data-type="work"] {
+  --clr-accent: var(--clr-work-blood);
+  --clr-accent2: var(--clr-work-water);
+}
+
+html[data-type="game"] {
+  --clr-accent: var(--clr-game-blood);
+  --clr-accent2: var(--clr-game-water);
+}
+
+html[data-type="slash"] {
+  --clr-accent: var(--clr-slash-blood);
+  --clr-accent2: var(--clr-slash-water);
+}
