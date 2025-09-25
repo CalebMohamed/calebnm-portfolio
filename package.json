@@ -9,7 +9,8 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^7.1.2"
+    "vite": "^7.1.2",
+    "vite-plugin-javascript-obfuscator": "^3.1.0"
   },
   "description": "caleb noah mohamed portfolio website",
   "main": "index.js",

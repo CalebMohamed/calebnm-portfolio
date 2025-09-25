@@ -22,11 +22,11 @@ corresponding suffix we add the import */}}
 {{- $manifest := readFile "/static/.vite/manifest.json" | transform.Unmarshal -}}
 {{- range $key, $value := $manifest -}}
 
-{{- if and (strings.Contains $key .Site.Params.srckeyword) (strings.HasSuffix $key ".js") -}}
+{{- if and (strings.Contains $key .Site.Params.jskeyword) (strings.HasSuffix $key ".js") -}}
 {{- $jspath = $value.file -}}
 {{- end -}}
 
-{{- if and (strings.Contains $key .Site.Params.srckeyword) (strings.HasSuffix $key ".css") -}}
+{{- if and (strings.Contains $key .Site.Params.csskeyword) (strings.HasSuffix $key ".css") -}}
 {{- $csspath = $value.file -}}
 {{- end -}}
 

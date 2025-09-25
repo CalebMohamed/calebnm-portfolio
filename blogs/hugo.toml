@@ -5,7 +5,8 @@ publishDir = "../dist"
 
 [params]
   copyright = '2025'
-  srckeyword = 'jump-up'
+  csskeyword = 'jump-up'
+  jskeyword = 'blogstyle'
   datelayout = 'Mon, 02 Jan 2006'
   [params.author]
     email = 'calebnoahmohamed@gmail.com'
