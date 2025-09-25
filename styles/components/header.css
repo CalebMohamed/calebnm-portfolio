@@ -18,8 +18,8 @@
 }
 
 .header-symbol {
+  display: none;
   color: var(--clr-accent);
-  display: block;
   width: var(--size-lg);
   height: var(--size-lg);
 }
@@ -46,6 +46,7 @@
   color: var(--clr-light);
 }
 
+
 /* i needed a stop gap when <350px because the header looked too bad */
 /* tiny usually from 320px */
 @media (max-width: 360px) {
@@ -55,6 +56,12 @@
 
   .header .btn {
     font-size: var(--size-xxs);
+  }
+}
+
+@media (min-width: 320px) {
+  .header-symbol {
+    display: block;
   }
 }
 

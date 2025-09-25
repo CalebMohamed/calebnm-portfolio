@@ -80,7 +80,7 @@
 .home p {
   max-width: 30ch;
   color: var(--clr-main);
-  font-size: var(--size-sm);
+  font-size: var(--size-base);
   margin-left: 1rem;
   text-align: left;
 }
@@ -96,13 +96,13 @@
 }
 
 .home .cycle-icon {
-  height: calc(var(--size-3xl) + 1rem);
-  width: calc(var(--size-3xl) + 1rem);
+  height: calc(var(--size-5xl) + 1rem);
+  width: calc(var(--size-5xl) + 1rem);
   padding: .25rem;
   border-radius: 50%;
   margin: 0 auto;
   margin-top: auto;
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
   color: var(--clr-h1);
   /* background-color: red; */
   cursor: pointer;
@@ -114,22 +114,143 @@
   position: absolute;
   height: 2rem;
   width: 2rem;
-  bottom: 2rem;
+  bottom: 3rem;
   color: var(--clr-h1);
 }
 
 .home .left-icon {
-  left: 1rem;
+  right: 2.5rem;
 }
 
 .home .right-icon {
-  left: 3rem;
+  right: 1rem;
 }
 
 .home .left-icon:hover,
 .home .right-icon:hover {
   color: var(--clr-accent2);
 }
+
+
+/* xs */
+@media (min-width: 475px) {
+  .home {
+    gap: 1.5rem;
+  }
+
+  .home .landing-words {
+    margin-bottom: -1.5rem;
+  }
+
+  .home h1 {
+    --size: var(--size-4xl);
+    font-size: var(--size-4xl);
+  }
+
+  .home h2 {
+    --size: var(--size-xl);
+    font-size: var(--size-xl);
+  }
+
+  .home p,
+  .home .btn {
+    font-size: var(--size-md);
+  }
+
+  .home .cycle-icon {
+    height: calc(var(--size-6xl) + 1rem);
+    width: calc(var(--size-6xl) + 1rem);
+  }
+
+  .home .left-icon {
+    right: 4.5rem;
+  }
+
+  .home .right-icon {
+    right: 3rem;
+  }
+}
+
+/* sm */
+/* @media (min-width: 640px) {} */
+
+/* md */
+@media (min-width: 768px) {
+  .home h1 {
+    --size: var(--size-5xl);
+    font-size: var(--size-5xl);
+  }
+
+  .home h2 {
+    --size: var(--size-2xl);
+    font-size: var(--size-2xl);
+  }
+
+  .home p,
+  .home .btn {
+    font-size: var(--size-lg);
+    max-width: 45ch;
+  }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+  .home h1 {
+    --size: var(--size-6xl);
+    font-size: var(--size-6xl);
+  }
+
+  .home h2 {
+    --size: var(--size-3xl);
+    font-size: var(--size-3xl);
+  }
+
+  .home p,
+  .home .btn {
+    font-size: var(--size-xl);
+    max-width: 45ch;
+  }
+
+  .home .cycle-icon {
+    height: calc(var(--size-6xl) + 1rem);
+    width: calc(var(--size-6xl) + 1rem);
+  }
+}
+
+/* xl */
+@media (min-width: 1280px) {
+  .home {
+    gap: 2rem;
+  }
+
+  .home .landing-words {
+    margin-bottom: -2rem;
+  }
+
+  .home h1 {
+    --size: var(--size-8xl);
+    font-size: var(--size-8xl);
+    margin-top: 1rem;
+  }
+
+  .home h2 {
+    --size: var(--size-4xl);
+    font-size: var(--size-4xl);
+  }
+
+  .home p,
+  .home .btn {
+    font-size: var(--size-2xl);
+  }
+
+  .home .cycle-icon {
+    height: calc(var(--size-8xl) + 1rem);
+    width: calc(var(--size-8xl) + 1rem);
+  }
+}
+
+/* 2xl */
+/* @media (min-width: 1536px) {} */
 
 .home .decorative_square {
   position: absolute;
@@ -206,98 +327,3 @@
     transform: rotate3d(.3, 1, 0, 360deg);
   }
 }
-
-/* xs */
-@media (min-width: 475px) {
-  .home {
-    gap: 1.5rem;
-  }
-
-  .home .landing-words {
-    margin-bottom: -1.5rem;
-  }
-
-  .home h1 {
-    --size: var(--size-4xl);
-    font-size: var(--size-4xl);
-  }
-
-  .home h2 {
-    --size: var(--size-xl);
-    font-size: var(--size-xl);
-  }
-
-  .home p,
-  .home .btn {
-    font-size: var(--size-base);
-  }
-
-  .home .cycle-icon {
-    height: calc(var(--size-4xl) + 1rem);
-    width: calc(var(--size-4xl) + 1rem);
-  }
-}
-
-/* sm */
-/* @media (min-width: 640px) {} */
-
-/* md */
-/* @media (min-width: 768px) {} */
-
-/* lg */
-@media (min-width: 1024px) {
-  .home h1 {
-    --size: var(--size-6xl);
-    font-size: var(--size-6xl);
-  }
-
-  .home h2 {
-    --size: var(--size-2xl);
-    font-size: var(--size-2xl);
-  }
-
-  .home p,
-  .home .btn {
-    font-size: var(--size-lg);
-  }
-
-  .home .cycle-icon {
-    height: calc(var(--size-6xl) + 1rem);
-    width: calc(var(--size-6xl) + 1rem);
-  }
-}
-
-/* xl */
-@media (min-width: 1280px) {
-  .home {
-    gap: 2rem;
-  }
-
-  .home .landing-words {
-    margin-bottom: -2rem;
-  }
-
-  .home h1 {
-    --size: var(--size-8xl);
-    font-size: var(--size-8xl);
-    margin-top: 1rem;
-  }
-
-  .home h2 {
-    --size: var(--size-4xl);
-    font-size: var(--size-4xl);
-  }
-
-  .home p,
-  .home .btn {
-    font-size: var(--size-xl);
-  }
-
-  .home .cycle-icon {
-    height: calc(var(--size-8xl) + 1rem);
-    width: calc(var(--size-8xl) + 1rem);
-  }
-}
-
-/* 2xl */
-/* @media (min-width: 1536px) {} */
