@@ -1,0 +1,45 @@
+{{- define "type" -}}game{{- end -}}
+
+{{- define "linkstack" -}}
+{{- partial "aboutlink" . -}}
+{{- partial "bloglink" . -}}
+{{- partial "complink" . -}}
+{{- partial "worklink" . -}}
+{{- partial "slashlink" . -}}
+{{- end -}}
+
+{{- define "extra" -}}
+<div class="generic_section section container">
+  <h1 class="reg-h1">games</h1>
+  <h1 class="fun-h1">gaming upon the games</h1>
+  <p>A collection of my games: some are playable in browser. Enjoy!</p>
+  <div class="display_cards">
+    <div class="display_cards-wrapper accent_card">
+      <h2>The Showdown: SealLion vs ManBusiness</h2>
+      <p>The first game I coded (Scratch when I was 9 doesn't count) in my first year of A Level CS using java in a
+        game-engine called greenfoot. Not playable in web but I'll show screenshots.</p>
+      <p><strong>Heads up!</strong> Page under construction.</p>
+      <a class="btn" href="">Check out the game</a>
+    </div>
+    <div class="display_cards-wrapper plain_card">
+      <h2>RagingSands</h2>
+      <p>My A Level individual project, made in Godot, its a 2D action platformer which I am quite happy with.</p>
+      <p><strong>Heads up!</strong> Page under construction.</p>
+      <a class="btn" href="">Check out the game</a>
+    </div>
+    <div class="display_cards-wrapper accent_card">
+      <h2>Zagged</h2>
+      <p>A WIP top-down pixel art arena fighter where you pilot a spaceship with movement dependent abilities. Also
+        made in godot</p>
+      <p><strong>Heads up!</strong> Page under construction.</p>
+      <a class="btn" href="">Check out the game</a>
+    </div>
+    <div class="display_cards-wrapper plain_card">
+      <h2>STOMMP</h2>
+      <p>A WIP 2D platformer about transfering falling momentum into rising and horizontal to navigate obsticles.</p>
+      <p><strong>Heads up!</strong> Page under construction.</p>
+      <a class="btn" href="">Check out the game</a>
+    </div>
+  </div>
+</div>
+{{- end -}}

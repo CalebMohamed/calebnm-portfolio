@@ -2,6 +2,8 @@
 date = 2025-09-06
 draft = false
 title = "im going to blog now"
+[params]
+    pageKey = 'src/light.js'
 +++
 I'm going to blog now.
 

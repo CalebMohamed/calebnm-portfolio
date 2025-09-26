@@ -2,6 +2,8 @@
 date = 2025-08-28
 draft = false
 title = "making this site"
+[params]
+    pageKey = 'src/light.js'
 +++
 ## how i got here
 I've wanted a personal website for a long time. I was first introduced to html and css in an ice-cool computer room at secondary

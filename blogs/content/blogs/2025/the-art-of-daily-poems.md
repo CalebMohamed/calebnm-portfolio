@@ -2,6 +2,8 @@
 date = 2025-09-14
 draft = false
 title = "the art of daily poems"
+[params]
+    pageKey = 'src/light.js'
 +++
 
 It all started around three years ago - rather, two years, nine months and a bit  - with an innocent challenge from a Christian mentor of mine. A wonderfully creative and spontaneous mentor.

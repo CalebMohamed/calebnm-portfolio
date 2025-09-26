@@ -1,70 +1,44 @@
-{{/* this very goofy section gets the manifest in list for, then loops over it naming the keys and values then if the
-cache-busted key name (which is the file name lol) contain our keyword controlled in hugo.toml and has the
-corresponding suffix we add the import */}}
-
-{{/* these are here as a fallback so that its still defined even though it wont work */}}
-{{- $jspath := "default.js" -}}
-{{- $importpaths := slice -}}
-{{- $csspath := "default.js" -}}
-
-{{- $blogkey := .Site.Params.blogkey -}}
-{{- $csskey := .Site.Params.csskey -}}
-
-{{- $manifest := readFile "/static/.vite/manifest.json" | transform.Unmarshal -}}
-{{- range $key, $value := $manifest -}}
-
-{{/* this weirdly needs to end in html since we are hooking into the blog-style index page to get the dependencies */}}
-{{- if and (strings.Contains $key $blogkey) (strings.HasSuffix $key ".html") -}}
-{{- $jspath = $value.file -}}
-{{- $importpaths = $value.imports -}}
-{{- else if and (strings.Contains $key $csskey) (strings.HasSuffix $key ".css") -}}
-{{- $csspath = $value.file -}}
-{{- end -}}
-
-{{- end -}}
-
 <!doctype html>
-<html lang="en" data-theme="" data-type='{{- block "type" . -}}{{- end -}}'>
+<html lang="en" data-theme="" data-type='{{- block "type" . -}}base{{- end -}}'>
 
 <head>
-  <script>
-    (() => {
-      // check localStorage first (user override)
-      const saved = localStorage.getItem("theme");
-      if (saved) {
-        document.documentElement.setAttribute("data-theme", saved);
-        return;
-      }
-
-      // otherwise fall back to system preference
-      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      document.documentElement.setAttribute("data-theme", prefersDark ? "dark" : "light");
-    })();
-  </script>
   {{- partial "head.html" . -}}
-  <script type="module" crossorigin src="/{{ $jspath }}"></script>
-  {{- range $i := seq (len $importpaths) -}}
-  <link rel="modulepreload" crossorigin href='/assets/{{ strings.TrimPrefix "_" (index $importpaths (sub $i 1)) }}'>
-  {{- end -}}
-  <link rel="stylesheet" href="/{{ $csspath }}">
+  {{- partial "assets.html" .Params.pageKey -}}
 </head>
 
 <body>
-  <!-- <p>{{ $jspath }}</p> -->
-  <!-- <p>{{ index $importpaths 0 }}</p> -->
-  <!-- <p>{{ index $importpaths 1 }}</p> -->
-  <!-- <p>{{ $csspath }}</p> -->
-
+  {{- block "altHeader" . -}}
   <header>
     {{- partial "header.html" . -}}
   </header>
+  {{- end -}}
 
+  {{- block "altMain" . -}}
   <main>
-    {{- block "main" . }}{{ end -}}
+    {{- block "main" . }}
+    <div class="generic_section container section">
+      <h1>{{ lower .Title }}</h1>
+      {{ .Content }}
+    </div>
+    {{ end -}}
+    {{- /* for the slash pages with content and straight html */ -}}
+    {{- block "extra" . -}}
+    {{- end -}}
   </main>
+  {{- end -}}
 
   <footer>
-    {{- block "linkstack" . }}{{ end -}}
+    <div class="linkstack container wide section">
+      {{- block "linkstack" . -}}
+      {{- partial "aboutlink" . -}}
+      {{- partial "poemlink" . -}}
+      {{- partial "bloglink" . -}}
+      {{- partial "complink" . -}}
+      {{- partial "worklink" . -}}
+      {{- partial "gamelink" . -}}
+      {{- partial "slashlink" . -}}
+      {{- end -}}
+    </div>
     {{- partial "footer.html" . -}}
   </footer>
 </body>

@@ -3,70 +3,32 @@
 {{ define "main" }}
 <div class="generic_section container section">
   <h1>{{ lower .Title }}</h1>
+  <h2>last 5 blogs:</h2>
   <ul>
-    {{ range .Sections }}
-    <li><a href="{{ .RelPermalink }}">{{ lower .Title }}</a> ({{ len .Pages }})</li>
+    {{ range first 5 (where .Site.RegularPages "Type" "blogs") }}
+    <li><a href="{{ .RelPermalink }}">{{ lower .Title }}</a> ({{ .Date.Format "2 Jan" }})</li>
     {{ end }}
   </ul>
+
+  {{- range .Sections -}}
+  <div class="link-div">
+    <h2>{{ lower .Title }} ({{ len .Pages }})</h2>
+    <a class="link-arrow" href="{{ .RelPermalink }}">
+      <svg xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 640 640"><!-- Font Awesome Free v7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+        <path fill="currentColor"
+          d="M566.6 342.6C579.1 330.1 579.1 309.8 566.6 297.3L406.6 137.3C394.1 124.8 373.8 124.8 361.3 137.3C348.8 149.8 348.8 170.1 361.3 182.6L466.7 288L96 288C78.3 288 64 302.3 64 320C64 337.7 78.3 352 96 352L466.7 352L361.3 457.4C348.8 469.9 348.8 490.2 361.3 502.7C373.8 515.2 394.1 515.2 406.6 502.7L566.6 342.7z" />
+      </svg>
+    </a>
+  </div>
+  {{ end }}
 </div>
 {{ end }}
 
 {{- define "linkstack" -}}
-<div class="linkstack container wide section">
-  <div class="about">
-    <h1>about</h1>
-    <p>find out more about me here.</p>
-    <a class="link-arrow" href="/about/">
-      <svg xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 640 640"><!--!Font Awesome Free v7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-        <path fill="currentColor"
-          d="M566.6 342.6C579.1 330.1 579.1 309.8 566.6 297.3L406.6 137.3C394.1 124.8 373.8 124.8 361.3 137.3C348.8 149.8 348.8 170.1 361.3 182.6L466.7 288L96 288C78.3 288 64 302.3 64 320C64 337.7 78.3 352 96 352L466.7 352L361.3 457.4C348.8 469.9 348.8 490.2 361.3 502.7C373.8 515.2 394.1 515.2 406.6 502.7L566.6 342.7z" />
-      </svg>
-    </a>
-  </div>
-  <div class="poem">
-    <h1>poems</h1>
-    <p>for all you word lovers.</p>
-    <a class="link-arrow" href="/poems/">
-      <svg xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 640 640"><!--!Font Awesome Free v7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-        <path fill="currentColor"
-          d="M566.6 342.6C579.1 330.1 579.1 309.8 566.6 297.3L406.6 137.3C394.1 124.8 373.8 124.8 361.3 137.3C348.8 149.8 348.8 170.1 361.3 182.6L466.7 288L96 288C78.3 288 64 302.3 64 320C64 337.7 78.3 352 96 352L466.7 352L361.3 457.4C348.8 469.9 348.8 490.2 361.3 502.7C373.8 515.2 394.1 515.2 406.6 502.7L566.6 342.7z" />
-      </svg>
-    </a>
-  </div>
-  <div class="comp">
-    <h1>projects</h1>
-    <p>check out my hobby projects.</p>
-    <a class="link-arrow" href="/projects/">
-      <svg xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 640 640"><!--!Font Awesome Free v7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-        <path fill="currentColor"
-          d="M566.6 342.6C579.1 330.1 579.1 309.8 566.6 297.3L406.6 137.3C394.1 124.8 373.8 124.8 361.3 137.3C348.8 149.8 348.8 170.1 361.3 182.6L466.7 288L96 288C78.3 288 64 302.3 64 320C64 337.7 78.3 352 96 352L466.7 352L361.3 457.4C348.8 469.9 348.8 490.2 361.3 502.7C373.8 515.2 394.1 515.2 406.6 502.7L566.6 342.7z" />
-      </svg>
-    </a>
-  </div>
-  <div class="work">
-    <h1>work</h1>
-    <p>see whether i'm a good fit.</p>
-    <a class="link-arrow" href="/work/">
-      <svg xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 640 640"><!--!Font Awesome Free v7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-        <path fill="currentColor"
-          d="M566.6 342.6C579.1 330.1 579.1 309.8 566.6 297.3L406.6 137.3C394.1 124.8 373.8 124.8 361.3 137.3C348.8 149.8 348.8 170.1 361.3 182.6L466.7 288L96 288C78.3 288 64 302.3 64 320C64 337.7 78.3 352 96 352L466.7 352L361.3 457.4C348.8 469.9 348.8 490.2 361.3 502.7C373.8 515.2 394.1 515.2 406.6 502.7L566.6 342.7z" />
-      </svg>
-    </a>
-  </div>
-  <div class="slash">
-    <h1>slash pages</h1>
-    <p>here's a little map for you.</p>
-    <a class="link-arrow" href="/slashes/">
-      <svg xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 640 640"><!--!Font Awesome Free v7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-        <path fill="currentColor"
-          d="M566.6 342.6C579.1 330.1 579.1 309.8 566.6 297.3L406.6 137.3C394.1 124.8 373.8 124.8 361.3 137.3C348.8 149.8 348.8 170.1 361.3 182.6L466.7 288L96 288C78.3 288 64 302.3 64 320C64 337.7 78.3 352 96 352L466.7 352L361.3 457.4C348.8 469.9 348.8 490.2 361.3 502.7C373.8 515.2 394.1 515.2 406.6 502.7L566.6 342.7z" />
-      </svg>
-    </a>
-  </div>
-</div>
+{{- partial "aboutlink" . -}}
+{{- partial "poemlink" . -}}
+{{- partial "complink" . -}}
+{{- partial "worklink" . -}}
+{{- partial "slashlink" . -}}
 {{- end -}}

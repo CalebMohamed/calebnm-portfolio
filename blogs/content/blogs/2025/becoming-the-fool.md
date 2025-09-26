@@ -2,6 +2,8 @@
 date = 2025-09-25
 draft = false
 title = 'becoming the fool'
+[params]
+    pageKey = 'src/light.js'
 +++
 I love programming because it reminds me that **I'm the fool**.
 

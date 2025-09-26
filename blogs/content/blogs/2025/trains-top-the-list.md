@@ -2,6 +2,8 @@
 date = 2025-09-15
 draft = false
 title = "trains top the list"
+[params]
+    pageKey = 'src/light.js'
 +++
 Out of all methods of transport, trains top the list. And, funnily enough, I'm on a train right now.
 

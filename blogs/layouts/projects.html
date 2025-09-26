@@ -1,0 +1,78 @@
+{{- define "type" -}}comp{{- end -}}
+
+{{- define "linkstack" -}}
+{{- partial "aboutlink" . -}}
+{{- partial "poemlink" . -}}
+{{- partial "bloglink" . -}}
+{{- partial "worklink" . -}}
+{{- partial "gamelink" . -}}
+{{- partial "slashlink" . -}}
+{{- end -}}
+
+{{- define "extra" -}}
+<div class="generic_section section container">
+  <h1 class="reg-h1">wordsmithery</h1>
+  <h1 class="fun-h1">wordsmithery and the like</h1>
+  <p>A collection of my wordy arts: blogs, poems, newsletters galore!</p>
+  <div class="display_cards">
+    <div class="display_cards-wrapper accent_card">
+      <h2>Poems</h2>
+      <p>I've been writing daily poems for coming up to 2 years, some of them are good some of them aren't, but
+        there's so many I hope you'll find some that you like!</p>
+      <p><strong>Heads up!</strong> This page may not be functional yet as it requires me to learn how to implement
+        database calls and other web-app stuff.</p>
+      <a class="btn" href="../poems/">To the poems</a>
+    </div>
+    <div class="display_cards-wrapper plain_card">
+      <h2>Blogs</h2>
+      <p>The home of my yap indeed. Perhaps you'll find some wisdom here. I'll probably talk about Christ, tech,
+        writing and whatever else.</p>
+      <a class="btn" href="../blogs/">To the blogs</a>
+    </div>
+    <div class="display_cards-wrapper accent_card">
+      <h2>Newsletters</h2>
+      <p>Newsletters both public and private ones for the peeps who know me - you better remember the passcode to get
+        in!</p>
+      <p><strong>Heads up!</strong> I haven't made any newsletters yet - this is for the future.</p>
+      <a class="btn" href="">To the news</a>
+    </div>
+    <div class="display_cards-wrapper plain_card">
+      <h2>-- blank --</h2>
+      <p>o7 mr/mrs internet person</p>
+      <p>Eu dolore magna voluptate quis ea. Irure ea eiusmod do sunt in mollit ad duis reprehenderit sit aute. Est
+        cupidatat Lorem voluptate anim.</p>
+    </div>
+  </div>
+</div>
+<div class="generic_section section container">
+  <h1 class="reg-h1">cs projects</h1>
+  <h1 class="fun-h1">computer science, yay!</h1>
+  <p>A collection of my varied computer science and programming interests.</p>
+  <div class="display_cards container">
+    <div class="display_cards-wrapper accent_card">
+      <h2>Graphics Programming</h2>
+      <p>Linear algebra gpus and beautiful art... and all in one!!! SIGN ME UP!</p>
+      <p><strong>Heads up!</strong> Page under construction.</p>
+      <a class="btn" href="">To graphics</a>
+    </div>
+    <div class="display_cards-wrapper plain_card">
+      <h2>Web Development</h2>
+      <p>I'm loving this atm, and I talk a little about how I made this website <a
+          href="../blogs/2025/how-i-made-this-site/">here.</a></p>
+      <p><strong>Heads up!</strong> Page under construction.</p>
+      <a class="btn" href="">To web dev</a>
+    </div>
+    <div class="display_cards-wrapper accent_card">
+      <h2>Theoretical Interests</h2>
+      <p>A little place to explore my theoretical cs interest.</p>
+      <p><strong>Heads up!</strong> Page under construction.</p>
+      <a class="btn" href="">To theory</a>
+    </div>
+    <div class="display_cards-wrapper plain_card">
+      <h2>-- blank --</h2>
+      <p>Eu dolore magna voluptate quis ea. Irure ea eiusmod do sunt in mollit ad duis reprehenderit sit aute. Est
+        cupidatat Lorem voluptate anim.</p>
+    </div>
+  </div>
+</div>
+{{- end -}}

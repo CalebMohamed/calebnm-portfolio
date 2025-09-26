@@ -1,5 +1,5 @@
 <div class="generic_section container section">
-  <h2>last 5 blogs</h2>
+  <h2>last 5 blogs:</h2>
   <ul>
     {{ range first 5 (where .Site.RegularPages "Type" "blogs") }}
     <li><a href="{{ .RelPermalink }}">{{ lower .Title }}</a> ({{ .Date.Format "2 Jan" }})</li>

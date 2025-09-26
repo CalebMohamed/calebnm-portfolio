@@ -1,0 +1,33 @@
+{{- /* the context . should be a string for the bundleKey */ -}}
+
+{{- $manifest := readFile "/static/.vite/manifest.json" | transform.Unmarshal -}}
+{{- $entry := index $manifest . -}}
+
+{{- /* adds the entry point script */ -}}
+<script type="module" src="/{{ $entry.file }}"></script>
+
+{{- /* iterates over the imports and uses them to get the manifest entries */ -}}
+{{- with $entry.imports -}}
+{{- range . -}}
+{{ $import := index $manifest . }}
+
+{{- /* adds import's stylesheets and then their module */ -}}
+{{- with $import.css -}}
+{{- range . -}}
+<link rel="stylesheet" href="/{{ . }}">
+{{- end -}}
+{{- end -}}
+
+<link rel="modulepreload" href='/{{ $import.file }}'>
+
+{{- end -}}
+{{- end -}}
+
+{{- /* iterates through style sheets in the css list field */ -}}
+{{- /* this needs to go bellow the import styles since display cards needs to come after generic sections which is
+bundled in the import */ -}}
+{{- with $entry.css -}}
+{{- range . -}}
+<link rel="stylesheet" href="/{{ . }}">
+{{- end -}}
+{{- end -}}

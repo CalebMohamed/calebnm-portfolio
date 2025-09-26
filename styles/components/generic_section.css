@@ -22,6 +22,29 @@
   font-size: var(--size-lg);
 }
 
+.generic_section .link-div {
+  position: relative;
+}
+
+.generic_section .link-arrow {
+  display: inline-block;
+  text-decoration: none;
+  position: absolute;
+  color: var(--clr-accent);
+  height: 1.5rem;
+  width: 1.5rem;
+  top: .125rem;
+  left: 5rem;
+  z-index: 1;
+  transform: translateX(0px);
+  transition: transform 0.2s;
+}
+
+.generic_section .link-arrow:hover {
+  color: var(--clr-accent2);
+  transform: translateX(8px);
+}
+
 .generic_section p,
 .generic_section ul,
 .generic_section ol {
@@ -47,6 +70,11 @@
 
   .generic_section h2 {
     font-size: var(--size-xl);
+  }
+
+  .generic_section .link-arrow {
+    top: .15rem;
+    left: 5.5rem;
   }
 
   .generic_section .btn {
@@ -78,6 +106,11 @@
     font-size: var(--size-2xl);
   }
 
+  .generic_section .link-arrow {
+    top: .3rem;
+    left: 6.5rem;
+  }
+
   .generic_section .btn {
     font-size: var(--size-xl);
   }
@@ -95,6 +128,13 @@
 
   .generic_section h2 {
     font-size: var(--size-4xl);
+  }
+
+  .generic_section .link-arrow {
+    width: 2.5rem;
+    height: 2.5rem;
+    top: .25rem;
+    left: 9.5rem;
   }
 
   .generic_section .btn {

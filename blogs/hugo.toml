@@ -1,12 +1,10 @@
 baseURL = 'https://calebmohamed.com/'
 languageCode = 'en-uk'
-title = 'caleb-mohamed'
+title = 'caleb mohamed'
 publishDir = "../dist"
 
 [params]
   copyright = '2025'
-  blogkey = 'blogstyle'
-  csskey = 'jump-up'
   datelayout = 'Mon, 02 Jan 2006'
   [params.author]
     email = 'calebnoahmohamed@gmail.com'
@@ -16,7 +14,7 @@ publishDir = "../dist"
   blogs = '/blogs/:year/:slug/'
 
 [outputs]
-  home = ['rss']
+  home = ['html']
   section = ['html', 'rss']
   taxonomy = []
   term = []
