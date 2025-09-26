@@ -29,7 +29,7 @@
   display: inline-block;
   text-decoration: none;
   position: absolute;
-  color: var(--clr-h1);
+  color: var(--clr-dh1);
   height: 2rem;
   width: 2rem;
   top: calc(50% - 1rem);
