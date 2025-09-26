@@ -9,13 +9,6 @@
   --clr-lmain: #475569;
   --clr-lh1: #1e293b;
 
-  --clr-bg: var(--clr-dark);
-  --clr-main: var(--clr-dmain);
-  --clr-h1: var(--clr-dh1);
-  --clr-h2: var(--clr-base-blood);
-  --clr-accent: var(--clr-base-blood);
-  --clr-accent2: var(--clr-base-water);
-  --clr-accent3: #a6a09b;
 
   /* color schemes all 600, 200 */
   /* base rose */
@@ -114,19 +107,45 @@ strong {
   font-weight: bolder;
 }
 
-@media (prefers-color-scheme: light) {
+/* defaulting to light colouring */
+:root {
+  --clr-bg: var(--clr-light);
+  --clr-main: var(--clr-lmain);
+  --clr-h1: var(--clr-lh1);
 
-  /* @media (prefers-color-scheme: dark) { */
+  /* defaults accents to base and h2 to accent3 */
+  --clr-accent: var(--clr-base-blood);
+  --clr-accent2: var(--clr-base-water);
+  --clr-accent3: #a6a09b;
+  /* most places will use --clr-accent instead of --clr-h2 anyway */
+  --clr-h2: var(--clr-accent3);
+}
+
+@media (prefers-color-scheme: dark) {
   :root {
-    --clr-bg: var(--clr-light);
-    --clr-main: var(--clr-lmain);
-    --clr-h1: var(--clr-lh1);
-    --clr-h2: var(--clr-base-blood);
+    --clr-bg: var(--clr-dark);
+    --clr-main: var(--clr-dmain);
+    --clr-h1: var(--clr-dh1);
   }
 }
 
+html[data-theme="light"] {
+  --clr-bg: var(--clr-light);
+  --clr-main: var(--clr-lmain);
+  --clr-h1: var(--clr-lh1);
+}
+
+html[data-theme="dark"] {
+  --clr-bg: var(--clr-dark);
+  --clr-main: var(--clr-dmain);
+  --clr-h1: var(--clr-dh1);
+}
+
 /* the default */
-/* html[data-type="base"] {} */
+html[data-type="base"] {
+  --clr-accent: var(--clr-base-blood);
+  --clr-accent2: var(--clr-base-water);
+}
 
 html[data-type="poem"] {
   --clr-accent: var(--clr-poem-blood);

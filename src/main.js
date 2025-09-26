@@ -8,6 +8,7 @@ import '../styles/components/footer.css'
 import '../styles/utils.css'
 import './landing-cycle.js'
 import './linkstack.js'
+import './theme-toggle.js'
 import * as LH from './landing-headings.js'
 import * as JU from './jump-up.js'
 

@@ -24,9 +24,23 @@ corresponding suffix we add the import */}}
 {{- end -}}
 
 <!doctype html>
-<html lang="en" data-type='{{- block "type" . -}}{{- end -}}'>
+<html lang="en" data-theme="" data-type='{{- block "type" . -}}{{- end -}}'>
 
 <head>
+  <script>
+    (() => {
+      // check localStorage first (user override)
+      const saved = localStorage.getItem("theme");
+      if (saved) {
+        document.documentElement.setAttribute("data-theme", saved);
+        return;
+      }
+
+      // otherwise fall back to system preference
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      document.documentElement.setAttribute("data-theme", prefersDark ? "dark" : "light");
+    })();
+  </script>
   {{- partial "head.html" . -}}
   <script type="module" crossorigin src="/{{ $jspath }}"></script>
   {{- range $i := seq (len $importpaths) -}}

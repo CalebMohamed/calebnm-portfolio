@@ -24,6 +24,43 @@
   height: var(--size-lg);
 }
 
+#theme-toggle {
+  display: block;
+}
+
+#sun,
+#moon {
+  transition: transform .2s, height .2s;
+}
+
+html[data-theme="light"] {
+  #sun {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(5rem);
+  }
+
+  #moon {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+}
+
+html[data-theme="dark"] {
+  #sun {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  #moon {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(5rem);
+  }
+}
+
 .header a {
   transition: transform .3s ease;
 }
@@ -46,6 +83,11 @@
   color: var(--clr-light);
 }
 
+@media (min-width: 340px) {
+  .header-symbol {
+    display: block;
+  }
+}
 
 /* i needed a stop gap when <350px because the header looked too bad */
 /* tiny usually from 320px */
@@ -59,11 +101,6 @@
   }
 }
 
-@media (min-width: 320px) {
-  .header-symbol {
-    display: block;
-  }
-}
 
 /* xs */
 @media (min-width: 475px) {
@@ -89,6 +126,11 @@
     display: block;
     font-size: var(--size-lg);
   }
+
+  .header-symbol#theme-toggle {
+    width: var(--size-2xl);
+    height: var(--size-2xl);
+  }
 }
 
 /* lg */
@@ -101,6 +143,11 @@
   .header-text {
     font-size: var(--size-2xl);
   }
+
+  .header-symbol#theme-toggle {
+    width: var(--size-3xl);
+    height: var(--size-3xl);
+  }
 }
 
 /* xl */
@@ -112,6 +159,11 @@
   /* .header .btn,  */
   .header-text {
     font-size: var(--size-3xl);
+  }
+
+  .header-symbol#theme-toggle {
+    width: var(--size-4xl);
+    height: var(--size-4xl);
   }
 }
 
