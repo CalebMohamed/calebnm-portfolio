@@ -16,7 +16,7 @@
 .linkstack h1,
 .linkstack h2,
 .linkstack p {
-  color: var(--clr-h1);
+  color: var(--clr-dh1);
   background-color: var(--clr-accent);
   padding-left: 2rem;
 }
@@ -43,3 +43,29 @@
   color: var(--clr-accent2);
   transform: translateX(8px);
 }
+
+/* xs */
+@media (min-width: 475px) {
+  .linkstack .link-arrow {
+    left: 20rem;
+  }
+}
+
+/* sm */
+/* @media (min-width: 640px) {} */
+
+/* md */
+/* @media (min-width: 768px) {} */
+
+/* lg */
+/* @media (min-width: 1024px) {} */
+
+/* xl */
+@media (min-width: 1280px) {
+  .linkstack .link-arrow {
+    left: 25rem;
+  }
+}
+
+/* 2xl */
+/* @media (min-width: 1536px) {} */
