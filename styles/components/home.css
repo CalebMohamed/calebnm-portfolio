@@ -131,6 +131,29 @@
   color: var(--clr-accent2);
 }
 
+html[data-theme="dark"] {
+
+  .home h1::before,
+  .home h2::before {
+    background-color: var(--clr-accent);
+  }
+
+  .home h2 {
+    color: var(--clr-accent2);
+  }
+}
+
+html[data-theme="light"] {
+
+  .home h1::before,
+  .home h2::before {
+    background-color: var(--clr-accent2);
+  }
+
+  .home h2 {
+    color: var(--clr-accent);
+  }
+}
 
 /* xs */
 @media (min-width: 475px) {
