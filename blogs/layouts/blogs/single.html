@@ -6,6 +6,7 @@
   {{- $layout := .Site.Params.datelayout -}}
   <p><strong><em>{{- .Date.Format $layout }}</em></strong>
     <strong> | </strong> last modified {{ .Lastmod.Format $layout -}}
+    <br><a href="/feeds/blogs/rss.xml">blog feed</a> <a href="aboutfeeds.com">(What is a feed?)</a>
   </p>
   {{ .Content }}
 </div>

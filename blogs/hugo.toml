@@ -7,6 +7,7 @@ enableGitInfo = true
 [params]
   copyright = '2025'
   datelayout = 'Mon, 02 Jan 2006'
+  mainfeedlimit = 20
   [params.author]
     email = 'calebnoahmohamed@gmail.com'
     name = 'Caleb Mohamed'
@@ -16,7 +17,7 @@ enableGitInfo = true
 
 [outputs]
   home = ['html']
-  section = ['html', 'rss']
+  section = ['html']
   taxonomy = []
   term = []
 
@@ -24,7 +25,3 @@ enableGitInfo = true
   [outputFormats.rss]
   basename = 'rss'
   path = 'feeds'
-
-[services]
-  [servies.rss]
-    limit = 15

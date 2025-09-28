@@ -1,13 +1,6 @@
 {{ define "main" }}
 <div class="generic_section container section">
   <h1>{{ lower .Title }}</h1>
-  <h2>last 5 blogs:</h2>
-  <ul>
-    {{ range first 5 (where .Site.RegularPages "Type" "blogs") }}
-    <li><a href="{{ .RelPermalink }}">{{ lower .Title }}</a> ({{ .Date.Format "2 Jan" }})</li>
-    {{ end }}
-  </ul>
-
   {{- range .Sections -}}
   <div class="link-div">
     <h2>{{ lower .Title }} ({{ len .Pages }})</h2>
@@ -21,6 +14,7 @@
   </div>
   {{ end }}
 </div>
+{{- partial "lastfive" . -}}
 {{ end }}
 
 {{- define "linkstack" -}}
