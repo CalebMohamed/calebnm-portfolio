@@ -4,6 +4,7 @@ draft = false
 title = "the art of daily poems"
 [params]
     pageKey = 'src/light.js'
+    type = "blog"
 +++
 
 It all started around three years ago - rather, two years, nine months and a bit  - with an innocent challenge from a Christian mentor of mine. A wonderfully creative and spontaneous mentor.

@@ -4,6 +4,7 @@ draft = false
 title = 'becoming the fool'
 [params]
     pageKey = 'src/light.js'
+    type = "blog"
 +++
 I love programming because it reminds me that **I'm the fool**.
 

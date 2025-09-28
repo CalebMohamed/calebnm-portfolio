@@ -3,6 +3,6 @@
     <a href="mailto:{{ .Site.Params.author.email }}">email me at {{ .Site.Params.author.email }}</a>
     <p>© {{ .Site.Params.copyright }} {{ .Site.Params.author.name }}</p>
     {{ $layout := .Site.Params.datelayout }}
-    <p>last modified {{ .Site.Lastmod.Format $layout }}</p>
+    <p>last modified {{ .Lastmod.Format $layout }}</p>
   </div>
 </div>

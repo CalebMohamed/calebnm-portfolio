@@ -4,6 +4,7 @@ draft = false
 title = "kinds of knowing"
 [params]
     pageKey = 'src/light.js'
+    type = "blog"
 +++
 At some point I started to overintellectualise relationships. I thought a lot about listening. I thought a lot about conveying myself clearly. It seemed to me that truly knowing a person is truly knowing their mind. It made me ask deep questions and show a lot of care. But I'm finding that there is a hidden poverty in viewing relationships as so cerebral.
 

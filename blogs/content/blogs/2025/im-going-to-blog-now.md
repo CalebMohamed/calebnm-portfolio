@@ -4,6 +4,7 @@ draft = false
 title = "im going to blog now"
 [params]
     pageKey = 'src/light.js'
+    type = "blog"
 +++
 I'm going to blog now.
 

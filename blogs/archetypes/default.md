@@ -4,4 +4,5 @@ draft = true
 title = '{{ replace .File.ContentBaseName "-" " " | lower }}'
 [params]
     pageKey = 'src/light.js'
+    type = "blog"
 +++

@@ -2,6 +2,7 @@ baseURL = 'https://calebmohamed.com/'
 languageCode = 'en-uk'
 title = 'caleb mohamed'
 publishDir = "../dist"
+enableGitInfo = true
 
 [params]
   copyright = '2025'

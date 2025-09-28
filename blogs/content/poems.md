@@ -3,6 +3,7 @@ title = "poems"
 layout = "poems"
 [params]
     pageKey = "src/light.js"
+    type = "poem"
 +++
 I've been writing poems every day* for almost 3 years now.
 I plan on setting up a database and having a little feature here to
