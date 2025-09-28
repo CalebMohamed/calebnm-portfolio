@@ -132,6 +132,9 @@
 }
 
 html[data-theme="dark"] {
+  .home .accented:hover {
+    color: var(--clr-accent);
+  }
 
   .home h1::before,
   .home h2::before {

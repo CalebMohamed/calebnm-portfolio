@@ -22,6 +22,39 @@
   font-size: var(--size-lg);
 }
 
+.generic_section p,
+.generic_section ul,
+.generic_section ol {
+  max-width: 60ch;
+  color: var(--clr-main);
+}
+
+
+.generic_section .btn {
+  background-color: var(--clr-accent);
+  font-size: var(--size-sm);
+  margin: 0 auto;
+}
+
+.generic_section a {
+  position: relative;
+}
+
+.generic_section a:not(.link-arrow)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: currentColor;
+  transition: width 0.2s ease;
+}
+
+.generic_section a:hover:not(.link-arrow)::after {
+  width: 100%;
+}
+
 .generic_section .link-div {
   position: relative;
 }
@@ -43,19 +76,6 @@
 .generic_section .link-arrow:hover {
   color: var(--clr-accent2);
   transform: translateX(8px);
-}
-
-.generic_section p,
-.generic_section ul,
-.generic_section ol {
-  max-width: 60ch;
-  color: var(--clr-main);
-}
-
-.generic_section .btn {
-  background-color: var(--clr-accent);
-  font-size: var(--size-sm);
-  margin: 0 auto;
 }
 
 /* xs */

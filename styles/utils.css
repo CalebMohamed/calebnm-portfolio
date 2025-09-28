@@ -66,7 +66,6 @@
   --random-rotation: 5deg;
   position: relative;
   display: inline-block;
-  cursor: pointer;
   transition: all .3s ease;
 }
 

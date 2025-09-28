@@ -5,20 +5,25 @@
 
 .footer-content {
   padding: 2em 2em;
-  color: var(--clr-h1);
+  color: var(--clr-light);
 }
 
 .footer-content a {
   color: var(--clr-light);
-  transition: colour 0.3s;
+  position: relative;
 }
 
-.footer-content a:hover {
-  font-weight: bold;
-  color: var(--clr-accent2);
-  cursor: pointer;
+.footer-content a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: currentColor;
+  transition: width 0.2s ease;
 }
 
-.footer-content p {
-  color: var(--clr-light);
+.footer-content a:hover::after {
+  width: 100%;
 }

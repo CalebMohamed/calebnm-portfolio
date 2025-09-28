@@ -1,7 +1,7 @@
 {{ define "main" }}
 <div class="generic_section container section">
   <h1>{{ lower .Title }}</h1>
-  <p><br><a href="/feeds/blogs/rss.xml">blog feed</a> <a href="https://aboutfeeds.com">(What is a feed?)</a></p>
+  <p><a href="/feeds/blogs/rss.xml">blog feed</a> <a href="https://aboutfeeds.com">(What is a feed?)</a></p>
   {{- range .Sections -}}
   <div class="link-div">
     <h2>{{ lower .Title }} ({{ len .Pages }})</h2>
