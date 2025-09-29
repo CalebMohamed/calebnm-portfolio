@@ -1,0 +1,46 @@
+{
+  "_jump-up-CA0-WUmP.css": {
+    "file": "assets/jump-up-CA0-WUmP.css",
+    "src": "_jump-up-CA0-WUmP.css"
+  },
+  "_jump-up-Dfsxf5Oc.js": {
+    "file": "assets/jump-up-Dfsxf5Oc.js",
+    "name": "jump-up",
+    "css": [
+      "assets/jump-up-CA0-WUmP.css"
+    ]
+  },
+  "src/home.js": {
+    "file": "assets/home-CNaIEIFF.js",
+    "name": "home",
+    "src": "src/home.js",
+    "isEntry": true,
+    "imports": [
+      "_jump-up-Dfsxf5Oc.js"
+    ],
+    "css": [
+      "assets/home-Cx33cL7V.css"
+    ]
+  },
+  "src/light.js": {
+    "file": "assets/light-DEEkiVhX.js",
+    "name": "light",
+    "src": "src/light.js",
+    "isEntry": true,
+    "imports": [
+      "_jump-up-Dfsxf5Oc.js"
+    ]
+  },
+  "src/main.js": {
+    "file": "assets/main-BoIfprtw.js",
+    "name": "main",
+    "src": "src/main.js",
+    "isEntry": true,
+    "imports": [
+      "_jump-up-Dfsxf5Oc.js"
+    ],
+    "css": [
+      "assets/main-DwpH8YHk.css"
+    ]
+  }
+}
