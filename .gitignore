@@ -9,7 +9,7 @@ lerna-debug.log*
 
 node_modules
 dist
-blogs/static
+hugo/static
 dist-ssr
 *.local
 
