@@ -1,7 +1,7 @@
 +++
 date = "2025-09-30"
 draft = false
-title = "my blogging system is here"
+title = "blogging is here"
 [params]
     pageKey = 'src/light.js'
     type = "comp"

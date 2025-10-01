@@ -44,8 +44,9 @@ To summarise my 'tech stack' (way too pretentious for how I just half understand
 - duckdns for effectively static external ip (and cron script updating duckdns every 5 minutes)
 
 In the future I'd like to add a blogging system, and a dynamic system to serve my daily poems from a databse. When I do those
-I'll link the writeups here and here, respectively.
+I'll link the writeups [here][4] and here, respectively.
 
 [1]: https://www.youtube.com/watch?v=PkADl0HubMY
 [2]: https://camillemormal.com/about
 [3]: https://en.wikipedia.org/wiki/Webring
+[4]: /blogs/2025/blogging-is-here/
