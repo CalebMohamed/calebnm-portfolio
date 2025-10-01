@@ -2,6 +2,9 @@
 date = "2025-09-30"
 draft = false
 title = "my blogging system is here"
+[params]
+    pageKey = 'src/light.js'
+    type = "comp"
 +++
 After a lot of revisions and tweaks my blogging system is here.
 
