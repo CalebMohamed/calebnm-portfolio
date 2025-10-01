@@ -2,12 +2,10 @@ param(
   [string]$remote
 )
 
+$dst="home/caleb/portfolio-website/nginx/html/"
+
 # clears staged and unstaged changed
 git push
 git reset HEAD .
-# adds and commits dist temporarily
-git add ./dist -f
-git commit -m "temp dist for remote"
-# pushes to remote and then resets to before adding dist
-git subtree push --prefix=dist $remote main:master
-git reset HEAD~1
+./build.ps1
+tar -C ./dist -cf - . | ssh $remote "sudo rm -rf $dst/*; sudo mkdir -p $dst; sudo tar -C $dst -xpf -"
