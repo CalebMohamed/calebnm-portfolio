@@ -1,4 +1,4 @@
-# Remove-Item ./dist/* -Recurse
+Remove-Item ./dist/* -Recurse
 npm run build
 cd hugo
 hugo
