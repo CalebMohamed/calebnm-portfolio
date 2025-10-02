@@ -1,0 +1,11 @@
+{{- /* expects a number in the passed in context */ -}}
+<div class="generic_section container section">
+  <a class="noline" href="/allblogs/">
+    <h1>last {{ . }} blogs</h1>
+  </a>
+  <ul>
+    {{ range first . (where site.RegularPages "Type" "blogs") }}
+    <li><a href="{{ .RelPermalink }}">{{ lower .Title }}</a> ({{ .Date.Format "2 Jan" }})</li>
+    {{ end }}
+  </ul>
+</div>

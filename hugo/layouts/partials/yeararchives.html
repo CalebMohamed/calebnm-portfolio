@@ -1,7 +1,8 @@
-{{ define "main" }}
 <div class="generic_section container section">
-  <h1>{{ lower .Title }}</h1>
-  <p><a href="/feeds/blogs/rss.xml">blog feed</a> <a href="https://aboutfeeds.com">(What is a feed?)</a></p>
+  <a class="noline" href="/blogs/">
+    <h1>archives</h1>
+  </a>
+  {{- with site.GetPage "section" "blogs" -}}
   {{- range .Sections -}}
   <div class="link-div">
     <h2>{{ lower .Title }} ({{ len .Pages }})</h2>
@@ -13,15 +14,6 @@
       </svg>
     </a>
   </div>
-  {{ end }}
+  {{- end -}}
+  {{- end -}}
 </div>
-{{- partial "lastx" 10 -}}
-{{ end }}
-
-{{- define "linkstack" -}}
-{{- partial "aboutlink" . -}}
-{{- partial "poemlink" . -}}
-{{- partial "complink" . -}}
-{{- partial "worklink" . -}}
-{{- partial "slashlink" . -}}
-{{- end -}}

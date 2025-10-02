@@ -40,7 +40,7 @@
   position: relative;
 }
 
-.generic_section a:not(.link-arrow)::after {
+.generic_section a:not(.noline)::after {
   content: "";
   position: absolute;
   left: 0;
@@ -51,7 +51,7 @@
   transition: width 0.2s ease;
 }
 
-.generic_section a:hover:not(.link-arrow)::after {
+.generic_section a:hover:not(.noline)::after {
   width: 100%;
 }
 

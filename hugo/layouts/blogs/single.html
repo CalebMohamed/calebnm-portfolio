@@ -10,10 +10,12 @@
   </p>
   {{ .Content }}
 </div>
-{{- partial "lastfive" . -}}
+{{- partial "lastx" 5 -}}
+{{- partial "yeararchives" . -}}
 {{- end -}}
 
 {{- define "linkstack" -}}
+{{- partial "homelink" . -}}
 {{- partial "aboutlink" . -}}
 {{- partial "poemlink" . -}}
 {{- partial "complink" . -}}
