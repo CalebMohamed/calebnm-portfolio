@@ -11,6 +11,7 @@ node_modules
 dist
 hugo/static
 dist-ssr
+deploy.tar
 *.local
 
 # Editor directories and files

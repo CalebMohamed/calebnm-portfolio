@@ -2,10 +2,14 @@ param(
   [string]$remote
 )
 
-$dst="home/caleb/portfolio-website/nginx/html/"
+$dst="/portfolio-website/nginx/html/"
 
 # clears staged and unstaged changed
 git push
 git reset HEAD .
 ./build.ps1
-tar -C ./dist -cf - . | ssh $remote "sudo rm -rf $dst/*; sudo mkdir -p $dst; sudo tar -C $dst -xpf -"
+# generates and copies the compressed dist
+tar -cf deploy.tar ./dist
+scp ./deploy.tar "${remote}:/tmp/deploy.tar"
+# clears current dist folder and replaces with unpacked dist
+ssh localpi "sudo rm -rf $dst/* && sudo mkdir -p $dst && sudo tar -C $dst -xpf /tmp/deploy.tar && rm /tmp/deploy.tar"
