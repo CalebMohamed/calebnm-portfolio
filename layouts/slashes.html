@@ -4,6 +4,8 @@
 {{- partial "nowlink" . -}}
 {{- partial "poemlink" . -}}
 {{- partial "bloglink" . -}}
+{{- partial "anylink" (dict "type" "blog" "name" "allblogs" "descr" "a list of all my blogs." "link" "/allblogs/") -}}
+{{- partial "anylink" (dict "type" "blog" "name" "blogroll" "descr" "the blogs i like." "link" "/blogroll/") -}}
 {{- partial "complink" . -}}
 {{- partial "worklink" . -}}
 {{- partial "gamelink" . -}}
