@@ -100,3 +100,13 @@
   </div>
 </main>
 {{- end -}}
+
+{{- define "linkstack" -}}
+{{- partial "aboutlink" . -}}
+{{- partial "poemlink" . -}}
+{{- partial "bloglink" . -}}
+{{- partial "complink" . -}}
+{{- partial "worklink" . -}}
+{{- partial "gamelink" . -}}
+{{- partial "slashlink" . -}}
+{{- end -}}

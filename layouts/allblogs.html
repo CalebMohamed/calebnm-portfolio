@@ -1,9 +1,11 @@
 {{ define "main" }}
 <div class="generic_section container section">
-  <h1>blogs in {{ lower .Title }}</h1>
+  <a class="noline" href="/blogs/">
+    <h1>{{ .Title }}</h1>
+  </a>
   <p><a href="/feeds/blogs/rss.xml">blog feed</a> <a href="https://aboutfeeds.com">(What is a feed?)</a></p>
   <ul>
-    {{ range .Pages }}
+    {{ range (where site.RegularPages "Type" "blogs") }}
     <li><a href="{{ .RelPermalink }}">{{ lower .Title }}</a> ({{ .Date.Format "2 Jan" }})</li>
     {{ end }}
   </ul>
