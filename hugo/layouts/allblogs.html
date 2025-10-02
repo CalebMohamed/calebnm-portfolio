@@ -6,7 +6,7 @@
   <p><a href="/feeds/blogs/rss.xml">blog feed</a> <a href="https://aboutfeeds.com">(What is a feed?)</a></p>
   <ul>
     {{ range (where site.RegularPages "Type" "blogs") }}
-    <li><a href="{{ .RelPermalink }}">{{ lower .Title }}</a> ({{ .Date.Format "2 Jan" }})</li>
+    <li><a href="{{ .RelPermalink }}">{{ lower .Title }}</a> ({{ .Date.Format "2 Jan 2006" }})</li>
     {{ end }}
   </ul>
 </div>
