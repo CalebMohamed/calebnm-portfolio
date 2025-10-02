@@ -6,7 +6,7 @@ title = "blogging is here"
     pageKey = 'src/light.js'
     type = "comp"
 +++
-After a lot of revisions and tweaks my blogging system is here.
+After a lot of revisions and tweaks, my blogging system is here.
 
 It's a bit of a strange combo, but hear me out: I'm using a content-driven static site generator called Hugo to template together each html page, and a js and css bundler typically used for web apps called Vite. I use the template system and the Vite manifest file to hook up the styling and scripts correctly.
 
