@@ -29,6 +29,19 @@
   color: var(--clr-main);
 }
 
+.generic_section blockquote {
+  margin: 1em 0;
+  padding: 0.5em 1em;
+  border-left: 4px solid var(--clr-accent);
+  color: var(--clr-main);
+  font-style: italic;
+  transition: border-left-color .2s;
+}
+
+.generic_section blockquote:hover {
+  border-left-color: var(--clr-accent2);
+}
+
 
 .generic_section .btn {
   background-color: var(--clr-accent);
