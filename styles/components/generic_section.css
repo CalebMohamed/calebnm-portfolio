@@ -32,16 +32,28 @@
 .generic_section blockquote {
   margin: 1em 0;
   padding: 0.5em 1em;
-  border-left: 4px solid var(--clr-accent);
+  border-left: 4px solid var(--clr-main);
   color: var(--clr-main);
   font-style: italic;
-  transition: border-left-color .2s;
+  transition: border-left-color .5s;
 }
 
 .generic_section blockquote:hover {
-  border-left-color: var(--clr-accent2);
+  border-left-color: var(--clr-accent);
 }
 
+.generic_section hr {
+  border: none;
+  height: 4px;
+  width: 80%;
+  background-color: var(--clr-main);
+  margin: 1rem 0;
+  transition: background-color .5s;
+}
+
+.generic_section hr:hover {
+  background-color: var(--clr-accent);
+}
 
 .generic_section .btn {
   background-color: var(--clr-accent);
