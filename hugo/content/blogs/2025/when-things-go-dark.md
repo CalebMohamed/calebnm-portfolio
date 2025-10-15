@@ -31,9 +31,9 @@ and confined in little boxes in our houses.
 
 But there are some aspects where you are letting the outside world in.
 There is a real need for security because of hostile strangers and 
-runaway scripts roaming the landscape. Ultimately, its a give and take,
+runaway scripts roaming the landscape. Ultimately, its a give and take:
 despite the vulnerability, I hope to reach real people with my words 
-- to reach people *outside*.
+\- to reach people *outside*.
 
 This is quite a basic point that I've known for a while, but it's
 especially hit home with the physical distance I have to my webserver.
@@ -52,6 +52,6 @@ For now I'm in the dark.
 
 EDIT: 14.10.25
 
-I looked into it a bit more, and after becoming quite certain that I was
-just flagged for being new I asked my Mum to turn my pi on again. I ssh'd
-in and checked logs, users and crons and boom! we're so back.
+After becoming quite certain that I was just flagged for being new,
+I asked my Mum to turn my pi on again. I ssh'd in, checked logs, 
+users and crons and boom! we're so back.
