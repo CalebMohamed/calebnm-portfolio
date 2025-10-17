@@ -6,7 +6,6 @@ import '../styles/components/linkstack.css'
 import '../styles/components/header.css'
 import '../styles/components/footer.css'
 import '../styles/utils.css'
-import './linkstack.js'
 import './theme-toggle.js'
 import * as JU from './jump-up.js'
 
