@@ -6,7 +6,7 @@ layout = "about"
     type = "base"
 +++
 Hi, I'm Caleb Mohamed, a 19 year old from the South of England. I'm currently studying Computer Science at the
-University of Oxford. I love Jesus, music, maths, and poetry (well, maybe just writing them).
+University of Oxford. I love Jesus, music, maths, and poetry (more so writing it currently).
 
 I was born in Brighton, then swiftly escaped to the sleepy countryside 30 minutes North, until returning for A
 Levels and church. Since then, I've been off adventuring beneath picturesque spires and looming gargoyles until the present!
