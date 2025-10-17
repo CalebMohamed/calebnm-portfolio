@@ -1,6 +1,6 @@
 {{- /* expects a dictionary of a type, name, description, and link */ -}}
 {{- /* .type, .name, .descr, .link */ -}}
-<div class="{{ .type }}">
+<div data-type="{{ .type }}">
   <h1>/{{ .name }}</h1>
   <p>{{ .descr }}</p>
   <a class="link-arrow" href="{{ .link }}">
