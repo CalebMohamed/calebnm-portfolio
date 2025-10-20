@@ -39,7 +39,7 @@
   color: var(--clr-h1);
   font-size: var(--size-3xl);
   margin-top: 5rem;
-  margin-left: 1rem;
+  margin-left: 2rem;
   z-index: 1;
 }
 
@@ -60,7 +60,7 @@
   position: relative;
   color: var(--clr-accent);
   font-size: var(--size-lg);
-  margin-left: 1rem;
+  margin-left: 2rem;
   z-index: 1;
 }
 
@@ -80,7 +80,7 @@
   max-width: 30ch;
   color: var(--clr-main);
   font-size: var(--size-base);
-  margin-left: 1rem;
+  margin-left: 2rem;
   text-align: left;
 }
 
