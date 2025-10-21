@@ -95,8 +95,9 @@
 }
 
 .home .cycle-icon {
-  height: calc(var(--size-5xl) + 1rem);
-  width: calc(var(--size-5xl) + 1rem);
+  --size: calc(var(--size-5xl) + 1rem);
+  height: var(--size);
+  width: var(--size);
   padding: .25rem;
   border-radius: 50%;
   margin: 0 auto;
@@ -106,6 +107,9 @@
   /* background-color: red; */
   cursor: pointer;
   transition: color .2s;
+
+  /* for if it goes absolute */
+  right: calc(2.75rem - 0.5*var(--size));
 }
 
 .home .left-icon,
@@ -175,8 +179,11 @@ html[data-theme="light"] {
   }
 
   .home .cycle-icon {
-    height: calc(var(--size-6xl) + 1rem);
-    width: calc(var(--size-6xl) + 1rem);
+    --size: calc(var(--size-6xl) + 1rem);
+    /* height: calc(var(--size-6xl) + 1rem); */
+    /* width: calc(var(--size-6xl) + 1rem); */
+    /* for if it goes absolute */
+    right: calc(4.75rem - 0.5*var(--size));
   }
 
   .home .left-icon {
@@ -209,11 +216,6 @@ html[data-theme="light"] {
     max-width: 45ch;
   }
 
-  @media (max-height: 400px) {
-    .home h1 {
-      margin-top: 2rem;
-    }
-  }
 }
 
 /* lg */
@@ -235,14 +237,9 @@ html[data-theme="light"] {
   }
 
   .home .cycle-icon {
-    height: calc(var(--size-6xl) + 1rem);
-    width: calc(var(--size-6xl) + 1rem);
-  }
-
-  @media (max-height: 450px) {
-    .home h1 {
-      margin-top: 2rem;
-    }
+    --size: calc(var(--size-6xl) + 1rem);
+    /* height: calc(var(--size-6xl) + 1rem); */
+    /* width: calc(var(--size-6xl) + 1rem); */
   }
 }
 
@@ -251,7 +248,6 @@ html[data-theme="light"] {
   .home h1 {
     --size: var(--size-8xl);
     font-size: var(--size-8xl);
-    margin-top: 1rem;
   }
 
   .home h2 {
@@ -265,21 +261,22 @@ html[data-theme="light"] {
   }
 
   .home .cycle-icon {
-    height: calc(var(--size-8xl) + 1rem);
-    width: calc(var(--size-8xl) + 1rem);
-  }
-
-  @media (max-height: 400px) {
-    .home h1 {
-      margin-top: 3rem;
-    }
-
-    .home .cycle-icon {
-      height: calc(var(--size-6xl) + 1rem);
-      width: calc(var(--size-6xl) + 1rem);
-    }
+    --size: calc(var(--size-8xl) + 1rem);
+    /* height: calc(var(--size-8xl) + 1rem); */
+    /* width: calc(var(--size-8xl) + 1rem); */
   }
 }
 
 /* 2xl */
 /* @media (min-width: 1536px) {} */
+
+@media (max-height: 400px) {
+  .home h1 {
+    margin-top: 3rem;
+  }
+
+  .home .cycle-icon {
+    position: absolute;
+    top: calc(50% - 0.5*var(--size));
+  }
+}
