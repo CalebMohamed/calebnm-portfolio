@@ -25,13 +25,14 @@
   height: var(--size-lg);
 }
 
-.header .batch0,
-.header .batch1,
-.header .batch2 {
+.header .work,
+.header .comp,
+.header .about {
   display: none;
 }
 
-.header .batch3 {
+.header .blog,
+.header .theme {
   display: block;
 }
 
@@ -98,15 +99,15 @@ html[data-theme="dark"] {
 
 /* i needed a stop gap when <350px because the header looked too bad */
 /* tiny usually from 320px */
-@media (max-width: 360px) {
-  .header h1 {
-    font-size: var(--size-lg);
-  }
-
-  .header .btn {
-    font-size: var(--size-xxs);
-  }
-}
+/* @media (max-width: 360px) { */
+/*   .header h1 { */
+/*     font-size: var(--size-lg); */
+/*   } */
+/**/
+/*   .header .btn { */
+/*     font-size: var(--size-xxs); */
+/*   } */
+/* } */
 
 
 /* xs */
@@ -119,14 +120,16 @@ html[data-theme="dark"] {
     font-size: var(--size-base);
   }
 
-  .header .batch2 {
+  .header .about {
     display: block;
   }
 }
 
 /* sm */
 @media (min-width: 640px) {
-  .header .batch1 {
+
+  .header .work,
+  .header .comp {
     display: block;
   }
 }
@@ -134,12 +137,14 @@ html[data-theme="dark"] {
 /* md */
 @media (min-width: 768px) {
 
-  .header .batch1,
-  .header .batch2 {
+  .header .work,
+  .header .comp,
+  .header .blog,
+  .header .about {
     display: none;
   }
 
-  .header .batch0 {
+  .header-text {
     display: block;
     font-size: var(--size-lg);
   }
