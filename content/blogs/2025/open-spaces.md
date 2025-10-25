@@ -26,8 +26,8 @@ Pleasure."*
 ---
 
 Sometimes I get this really peculiar feeling as I'm walking through the fields:
-*"this is really cheeky. I shouldn't be* ***here**** - Oxford students are too busy for
-some walks through random fields."*
+*"this is really cheeky. I shouldn't be **here** - Oxford students are too busy for
+walks through random fields."*
 
 But I'm never too busy, not truly. Its a choice to remained so cooped up. The fields
 are always right **there**. It reminds me how privileged I am to be in this part of
@@ -38,7 +38,7 @@ all the greenery I walked past just popped in the evening shadows.
 
 ---
 
-I'm reminded of C.S. Lewis' amazing novel [The Great Divorce](1). He has a quote which
+I'm reminded of C.S. Lewis' amazing novel [The Great Divorce][1]. He has a quote which
 really stood out to me and painted a really beautiful picture of heaven:
 
 > I got out. The light and coolness that drenched me were like those of summer
