@@ -1,28 +1,39 @@
-import os
+#!/usr/bin/env python3
+from pathlib import Path
 import re
 
-base_dir = "content/poems"
+BASE = Path("content/poems")
+FRONT_RE = re.compile(r"(?s)^\+\+\+(.*?)\+\+\+(.*)$")  # group1 = front, group2 = body
 
-for root, _, files in os.walk(base_dir):
-    for file in files:
-        if file.endswith(".md"):
-            path = os.path.join(root, file)
-            with open(path, "r+", encoding="utf-8") as f:
-                text = f.read()
+if not BASE.exists():
+    raise SystemExit("content/poems not found - run from Hugo project root")
 
-            # Find TOML frontmatter between +++
-            match = re.match(r"(?s)^\+\+\+(.*?)\+\+\+(.*)$", text)
-            if not match:
-                continue  # skip files without TOML frontmatter
+changed = 0
+for md in BASE.rglob("*.md"):
+    text = md.read_text(encoding="utf-8")
+    m = FRONT_RE.match(text)
+    if m:
+        front, body = m.group(1), m.group(2)
+    else:
+        front, body = None, text
 
-            front, body = match.groups()
+    # skip if already wrapped
+    if body.lstrip().startswith("{{< poem") or body.lstrip().startswith("{{% poem"):
+        continue
 
-            # Only add if not already present
-            if "[params]" not in front:
-                front = front.rstrip() + "\n[params]\n  type = 'poem'\n  pageKey = 'src/poem.js'\n"
+    # if there's no body (empty file) skip
+    if not body.strip():
+        continue
 
-                new_text = f"+++{front}+++\n{body}"
-                with open(path, "w", encoding="utf-8") as f:
-                    f.write(new_text)
+    # build wrapped body (preserve the body content as-is except for leading blank lines)
+    new_body = "{{< poem >}}\n" + body.lstrip("\n") + "{{< /poem >}}"
 
-print("Done.")
+    if front is not None:
+        new_text = "+++" + front.rstrip() + "\n+++\n" + new_body
+    else:
+        new_text = new_body
+
+    md.write_text(new_text, encoding="utf-8")
+    changed += 1
+
+print(f"Done. Files modified: {changed}")
