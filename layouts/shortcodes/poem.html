@@ -1,1 +1,6 @@
-<div class="poem">{{ .Inner | safeHTML }}</div>
+{{ $stanzas := split .Inner "\n\n" }}
+{{ range $stanzas }}
+<p class="verse">
+  {{ . | replaceRE "\n" "<br />" | safeHTML }}
+</p>
+{{ end }}
