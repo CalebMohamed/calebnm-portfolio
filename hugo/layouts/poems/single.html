@@ -1,0 +1,24 @@
+{{- define "type" -}}blog{{- end -}}
+
+{{- define "main" -}}
+<div class="generic_section container section">
+  {{- $layout := .Site.Params.datelayout -}}
+  <p><strong><em>{{- .Date.Format $layout }}</em></strong>
+    <strong> | </strong> last modified {{ .Lastmod.Format $layout -}}
+    <br><a href="/feeds/poems/rss.xml">poem feed</a> <a href="https://aboutfeeds.com">(What is a feed?)</a>
+  </p>
+  {{ .Content }}
+  <p>{{ lower .Title }}</p>
+</div>
+{{- partial "lastxpoems" 5 -}}
+{{- partial "poemarchives" . -}}
+{{- end -}}
+
+{{- define "linkstack" -}}
+{{- partial "homelink" . -}}
+{{- partial "aboutlink" . -}}
+{{- partial "bloglink" . -}}
+{{- partial "complink" . -}}
+{{- partial "worklink" . -}}
+{{- partial "slashlink" . -}}
+{{- end -}}

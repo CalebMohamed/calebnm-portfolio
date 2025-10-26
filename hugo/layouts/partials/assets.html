@@ -1,7 +1,7 @@
 {{- /* the context . should be a string for the bundleKey */ -}}
 
 {{- $manifest := readFile "/static/.vite/manifest.json" | transform.Unmarshal -}}
-{{- $entry := index $manifest . -}}
+{{- $entry := index $manifest (default "src/light.js" .) -}}
 
 {{- /* adds the entry point script */ -}}
 <script type="module" src="/{{ $entry.file }}"></script>
