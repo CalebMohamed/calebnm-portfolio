@@ -14,12 +14,13 @@ enableGitInfo = true
 
 [permalinks]
   blogs = '/blogs/:year/:slug/'
+  poems = '/poems/:year/:month/:slug/'
 
 [outputs]
   home = ['html']
   section = ['html']
-  taxonomy = []
-  term = []
+  taxonomy = ['html']
+  term = ['html']
 
 [outputFormats]
   [outputFormats.rss]
