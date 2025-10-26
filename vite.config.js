@@ -21,6 +21,7 @@ export default defineConfig({
         home: 'src/home.js',
         main: 'src/main.js',
         light: 'src/light.js',
+        poem: 'src/poem.js',
       }
     }
   }

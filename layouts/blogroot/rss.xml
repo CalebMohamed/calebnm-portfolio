@@ -23,9 +23,9 @@
 {{ printf "<?xml-stylesheet href=\"/styles/pretty-feed-v3.xsl\" type=\"text/xsl\"?>" | safeHTML }}
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>blogs on {{ .Site.Title }}</title>
+    <title>poems on {{ .Site.Title }}</title>
     <link>{{ .Permalink }}</link>
-    <description>the last {{ site.Params.mainfeedlimit }} blogs on {{ .Site.Title }}</description>
+    <description>the last {{ site.Params.mainfeedlimit }} poems on {{ .Site.Title }}</description>
     <generator>Hugo</generator>
     <language>{{ site.Language.LanguageCode }}</language>{{ with $authorEmail }}
     <managingEditor>{{.}}{{ with $authorName }} ({{ . }}){{ end }}</managingEditor>{{ end }}{{ with $authorEmail }}
