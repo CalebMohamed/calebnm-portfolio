@@ -1,3 +1,46 @@
 .poem {
-  border: 1px solid red;
+  margin: 0 auto;
+  padding: 1rem;
+  border: 2px solid var(--clr-accent);
+  border-radius: 16px;
+  max-width: 60ch;
+  color: var(--clr-main);
 }
+
+.poem .verse {
+  font-size: var(--size-base);
+}
+
+/* xs */
+@media (min-width: 475px) {
+  .poem .verse {
+    font-size: var(--size-md);
+  }
+}
+
+/* sm */
+/* @media (min-width: 640px) {} */
+
+/* md */
+@media (min-width: 768px) {
+  .poem .verse {
+    font-size: var(--size-lg);
+  }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+  .poem .verse {
+    font-size: var(--size-xl);
+  }
+}
+
+/* xl */
+@media (min-width: 1280px) {
+  .poem .verse {
+    font-size: var(--size-2xl);
+  }
+}
+
+/* 2xl */
+/* @media (min-width: 1536px) {} */
