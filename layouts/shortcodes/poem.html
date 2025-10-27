@@ -1,6 +1,7 @@
 {{ $stanzas := split .Inner "\n\n" }}
 {{ range $stanzas }}
 <p class="verse">
-  {{ . | replaceRE "\n" "<br />" | safeHTML }}
+  {{- $s := strings.TrimSpace . -}}
+  {{ $s | replaceRE "\n" "<br />" | safeHTML }}
 </p>
 {{ end }}
