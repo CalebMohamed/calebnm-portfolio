@@ -2,6 +2,6 @@
 title = "all poems"
 layout = "allpoems"
 [params]
-    type = "poem"
+    colour = "poem"
     pageKey = "src/light.js"
 +++

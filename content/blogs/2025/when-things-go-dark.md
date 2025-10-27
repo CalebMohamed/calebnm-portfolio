@@ -4,7 +4,7 @@ draft = false
 title = 'when things go dark'
 [params]
     pageKey = 'src/light.js'
-    type = "blog"
+    colour = "blog"
 +++
 My pi might have been hacked.
 

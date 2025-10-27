@@ -3,7 +3,7 @@ title = "about"
 layout = "about"
 [params]
     pageKey = "src/light.js"
-    type = "base"
+    colour = "base"
 +++
 Hi, I'm Caleb Mohamed, a 19 year old from the South of England. I'm currently studying Computer Science at the
 University of Oxford. I love Jesus, music, maths, and poetry (more so writing it currently).

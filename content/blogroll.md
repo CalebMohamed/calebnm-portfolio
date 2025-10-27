@@ -3,7 +3,7 @@ title = "blogroll"
 layout = "blogroll"
 [params]
     pageKey = "src/light.js"
-    type = "blog"
+    colour = "blog"
 +++
 I'm really enjoying curating and staying up to date with [RSS feeds][1], I like that
 I get to choose what voices I listen to and it all feels so much more manageable and

@@ -1,9 +1,9 @@
 +++
 title = "poems"
-type = "poemroot"
+colour = "poemroot"
 outputs = ["html", "rss"]
 [params]
-    type = "poem"
+    colour = "poem"
     pageKey = 'src/poem.js'
 +++
 I've been writing poems every day* for almost 3 years now.

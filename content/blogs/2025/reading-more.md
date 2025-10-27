@@ -3,7 +3,7 @@ date = 2025-10-16
 draft = false
 title = "reading more"
 [params]
-  type = "blog"
+  colour = "blog"
   pageKey = "src/light.js"
 +++
 I really love reading. So much so that I find myself estranged from my early years when I'd rather do anything but read.
