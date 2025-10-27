@@ -11,7 +11,7 @@
   <div class="poem">
     {{ .Content }}
     <p>{{ lower .Title }}</p>
-    <br>
+    {{ partial "poemnav" . }}
   </div>
 </div>
 {{- partial "lastxpoems" 5 -}}

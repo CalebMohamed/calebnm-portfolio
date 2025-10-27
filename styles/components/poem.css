@@ -1,6 +1,7 @@
 .poem {
+  position: relative;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 2rem;
   border: 2px solid var(--clr-accent);
   border-radius: 16px;
   max-width: 60ch;
@@ -9,6 +10,28 @@
 
 .poem .verse {
   font-size: var(--size-base);
+}
+
+.poem .left-icon,
+.poem .right-icon {
+  position: absolute;
+  height: 2rem;
+  width: 2rem;
+  bottom: 1rem;
+  color: var(--clr-h1);
+}
+
+.poem .left-icon {
+  right: 2.5rem;
+}
+
+.poem .right-icon {
+  right: 1rem;
+}
+
+.poem .left-icon:hover,
+.poem .right-icon:hover {
+  color: var(--clr-accent2);
 }
 
 /* xs */
