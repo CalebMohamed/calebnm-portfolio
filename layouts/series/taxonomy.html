@@ -1,0 +1,24 @@
+{{ define "main" }}
+<div class="generic_section container section">
+  <a class="noline" href="/poems/">
+    <h1>{{ lower .Title }}</h1>
+  </a>
+  <p><a href="/feeds/poems/rss.xml">poem feed</a> <a href="https://aboutfeeds.com">(What is a feed?)</a></p>
+  {{ .Content }}
+
+  <ul>
+    {{ range .Data.Terms.Alphabetical }}
+    <li><a href="{{ .Page.RelPermalink }}">{{ lower .Page.Title }}</a> ({{ len .Pages }})</li>
+    {{ end }}
+  </ul>
+</div>
+{{ end }}
+
+{{- define "linkstack" -}}
+{{- partial "homelink" . -}}
+{{- partial "aboutlink" . -}}
+{{- partial "bloglink" . -}}
+{{- partial "complink" . -}}
+{{- partial "worklink" . -}}
+{{- partial "slashlink" . -}}
+{{- end -}}
