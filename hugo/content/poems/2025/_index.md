@@ -1,8 +1,8 @@
 +++
 title = "2025"
-type = "poemroot"
+colour = "poemroot"
 outputs = ["html"]
 [params]
-    type = "poem"
+    colour = "poem"
     pageKey = 'src/light.js'
 +++

@@ -1,7 +1,7 @@
 +++
 title = "poems by themes"
 [params]
-    type = "poem"
+    colour = "poem"
     pageKey = "src/light.js"
 
 [cascade.params]

@@ -4,7 +4,7 @@ draft = false
 title = 'open spaces'
 [params]
     pageKey = 'src/light.js'
-    type = "blog"
+    colour = "blog"
 +++
 I really like wide open spaces.
 

@@ -3,7 +3,7 @@ title = "games"
 layout = "games"
 [params]
     pageKey = "src/main.js"
-    type = "game"
+    colour = "game"
 +++
 This is the home of my games - for now I've just copy
 pasted my old unfinished page underneath this.

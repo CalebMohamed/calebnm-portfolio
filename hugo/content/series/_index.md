@@ -1,10 +1,10 @@
 +++
 title = "poems by series"
 [params]
-    type = "poem"
+    colour = "poem"
     pageKey = "src/light.js"
 
 [cascade.params]
-    type = "poem"
+    colour = "poem"
     pageKey = "src/poem.js"
 +++

@@ -4,7 +4,7 @@ draft = false
 title = "blogging is here"
 [params]
     pageKey = 'src/light.js'
-    type = "comp"
+    colour = "comp"
 +++
 After a lot of revisions and tweaks, my blogging system is here.
 

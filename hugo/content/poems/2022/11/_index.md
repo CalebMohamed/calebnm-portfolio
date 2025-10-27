@@ -2,6 +2,6 @@
 title = "2022/11"
 outputs = ["html"]
 [params]
-    type = "poem"
+    colour = "poem"
     pageKey = 'src/light.js'
 +++

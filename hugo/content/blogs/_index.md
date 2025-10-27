@@ -1,8 +1,8 @@
 +++
 title = "blogs by year"
-type = "blogroot"
+colour = "blogroot"
 outputs = ["html", "rss"]
 [params]
     pageKey = 'src/light.js'
-    type = "blog"
+    colour = "blog"
 +++
