@@ -3,6 +3,9 @@
 {{- partial "aboutlink" . -}}
 {{- partial "nowlink" . -}}
 {{- partial "poemlink" . -}}
+{{- partial "anylink" (dict "type" "poem" "name" "allpoems" "descr" "a list of all my poems." "link" "/allpoems/") -}}
+{{- partial "anylink" (dict "type" "poem" "name" "series" "descr" "poems organised by series." "link" "/series/") -}}
+{{- partial "anylink" (dict "type" "poem" "name" "themes" "descr" "poems organised by themes." "link" "/themes/") -}}
 {{- partial "bloglink" . -}}
 {{- partial "anylink" (dict "type" "blog" "name" "allblogs" "descr" "a list of all my blogs." "link" "/allblogs/") -}}
 {{- partial "anylink" (dict "type" "blog" "name" "blogroll" "descr" "the blogs i like." "link" "/blogroll/") -}}
