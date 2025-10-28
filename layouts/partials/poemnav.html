@@ -14,7 +14,7 @@
 {{ $pos := index $idx .File.Path }}
 {{ if gt $pos 0 }}
 {{ $prev := index $pages (sub $pos 1) }}
-<a class="left-icon noline" href="{{ $prev.RelPermalink }}">
+<a class="left-icon noline" href="{{ $prev.RelPermalink }}#{{ lower $prev.Title}}">
   <svg xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 640 640"><!--!Font Awesome Free v7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
     <path fill="currentColor"
@@ -24,7 +24,7 @@
 {{ end }}
 {{ if lt (add $pos 1) (len $pages) }}
 {{ $next := index $pages (add $pos 1) }}
-<a class="right-icon noline" href="{{ $next.RelPermalink }}">
+<a class="right-icon noline" href="{{ $next.RelPermalink }}#{{ lower $next.Title}}">
   <svg xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 640 640"><!--!Font Awesome Free v7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
     <path fill="currentColor"
