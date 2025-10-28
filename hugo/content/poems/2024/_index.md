@@ -1,6 +1,6 @@
 +++
 title = "2024"
-colour = "poemroot"
+type = "poemroot"
 outputs = ["html"]
 [params]
     colour = "poem"

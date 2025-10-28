@@ -7,10 +7,7 @@
   {{ .Content }}
 
   {{ range .Pages.ByDate }}
-  <div class="poem">
-    {{ .Content }}
-    <a href="{{ .RelPermalink }}">{{ lower .Title }}</a>
-  </div>
+  {{ partial "poem" . }}
   {{ end }}
 </div>
 {{ end }}

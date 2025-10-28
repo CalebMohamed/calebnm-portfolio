@@ -1,0 +1,22 @@
+{{- /* expects a poem page as context */ -}}
+<div class="poem">
+  {{ .Content }}
+  <a href="{{ .RelPermalink }}">{{ lower .Title }}</a>
+  <p>
+    {{- if .Params.themes -}}
+    <a href="/themes/">themes:</a>
+    {{- range .Params.themes }}
+     <a href="/themes/{{ . }}/">{{ . }}</a>
+    {{- end -}}
+    {{- end -}}
+  </p>
+  <p>
+    {{- if .Params.series -}}
+    <a href="/series/">series:</a>
+    {{- range .Params.series }}
+     <a href="/series/{{ . }}/">{{ . }}</a>
+    {{- end -}}
+    {{- end -}}
+  </p>
+  {{ partial "poemnav" . }}
+</div>
