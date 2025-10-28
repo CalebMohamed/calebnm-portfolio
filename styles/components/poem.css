@@ -6,7 +6,7 @@
   border-radius: 16px;
   max-width: 60ch;
   color: var(--clr-main);
-  scroll-margin-top: 2rem;
+  scroll-margin-top: 6rem;
 }
 
 .poem .verse {

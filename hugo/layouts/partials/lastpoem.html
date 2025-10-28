@@ -1,0 +1,6 @@
+{{- /* expects a number in the passed in context */ -}}
+<div class="generic_section container section">
+  {{ range first 1 (where site.RegularPages "Type" "poems") }}
+  {{ partial "poem" . }}
+  {{ end }}
+</div>
