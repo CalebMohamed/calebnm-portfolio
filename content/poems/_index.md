@@ -1,6 +1,6 @@
 +++
 title = "poems"
-colour = "poemroot"
+type = "poemroot"
 outputs = ["html", "rss"]
 [params]
     colour = "poem"

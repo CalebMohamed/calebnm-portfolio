@@ -8,11 +8,7 @@
     <br><a href="/feeds/poems/rss.xml">poem feed</a> <a href="https://aboutfeeds.com">(What is a feed?)</a>
   </p>
 
-  <div class="poem">
-    {{ .Content }}
-    <p>{{ lower .Title }}</p>
-    {{ partial "poemnav" . }}
-  </div>
+  {{ partial "poem" . }}
 </div>
 {{- partial "lastxpoems" 5 -}}
 {{- partial "poemarchives" . -}}
