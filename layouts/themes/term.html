@@ -6,7 +6,7 @@
   <p><a href="/feeds/poems/rss.xml">poem feed</a> <a href="https://aboutfeeds.com">(What is a feed?)</a></p>
   {{ .Content }}
 
-  {{ range .Pages.ByDate }}
+  {{ range .Pages.ByDate.Reverse }}
   {{ partial "poem" . }}
   {{ end }}
 </div>

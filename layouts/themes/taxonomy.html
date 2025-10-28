@@ -6,11 +6,11 @@
   <p><a href="/feeds/poems/rss.xml">poem feed</a> <a href="https://aboutfeeds.com">(What is a feed?)</a></p>
   {{ .Content }}
 
-  <ul>
+  <p>
     {{ range .Data.Terms.Alphabetical }}
-    <li><a href="{{ .Page.RelPermalink }}">{{ lower .Page.Title }}</a> ({{ len .Pages }})</li>
+    <span style="white-space: nowrap"><a href="{{ .Page.RelPermalink }}">{{ lower .Page.Title }}</a> ({{ len .Pages }})</span>
     {{ end }}
-  </ul>
+  </p>
 </div>
 {{ end }}
 
