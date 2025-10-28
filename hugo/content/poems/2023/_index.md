@@ -4,5 +4,5 @@ type = "poemroot"
 outputs = ["html"]
 [params]
     colour = "poem"
-    pageKey = 'src/light.js'
+    pageKey = 'src/poem.js'
 +++
