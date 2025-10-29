@@ -4,6 +4,7 @@
     <h1>{{ .Title }}</h1>
   </a>
   <p><a href="/feeds/blogs/rss.xml">blog feed</a> <a href="https://aboutfeeds.com">(What is a feed?)</a></p>
+  {{ .Content }}
   <ul>
     {{ range (where site.RegularPages "Type" "blogs") }}
     <li><a href="{{ .RelPermalink }}">{{ lower .Title }}</a> ({{ .Date.Format "2 Jan 2006" }})</li>
