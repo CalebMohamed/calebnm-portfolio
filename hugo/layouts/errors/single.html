@@ -1,0 +1,16 @@
+{{- define "main" -}}
+  <div class="error section container">
+    <h1>{{ lower .Title }}</h1>
+    <p>{{ .Content }}</p>
+  </div>
+{{- end -}}
+
+{{- define "linkstack" -}}
+{{- partial "aboutlink" . -}}
+{{- partial "poemlink" . -}}
+{{- partial "bloglink" . -}}
+{{- partial "complink" . -}}
+{{- partial "worklink" . -}}
+{{- partial "gamelink" . -}}
+{{- partial "slashlink" . -}}
+{{- end -}}
