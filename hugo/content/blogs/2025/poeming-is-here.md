@@ -41,9 +41,9 @@ dissatisfaction. I hope that it has made me more articulate, more
 reflective - hopefully - a better poet.
 
 That's one of things I find so fascinating though. I've always seen
-myself as someone who is a bit of a [corpus callosum][4], as Alex
+myself as someone who is a bit of a [corpus callosum][4] as Alex
 O'Connor humorously called himself after mediating [a debate between
-Richard Dawkins and Jordan Peterson][5]. As someone who appreciates a
+Richard Dawkins and Jordan Peterson][5]. Seen myself as someone who appreciates a
 good painting, who is enamored with people, who loves *the fluffier things* 
 - maybe even someone who *makes art sometimes*.
 
