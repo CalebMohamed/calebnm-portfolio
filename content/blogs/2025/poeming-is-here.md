@@ -3,8 +3,8 @@ date = '2025-11-01'
 draft = false
 title = 'poeming is here'
 [params]
+    colour = "blog"
     pageKey = 'src/light.js'
-    type = "blog"
 +++
 If you aren't quite up to scratch in Caleb-land: poeming is [here][1].
 
