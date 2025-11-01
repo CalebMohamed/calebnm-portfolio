@@ -45,7 +45,7 @@ myself as someone who is a bit of a [corpus callosum][4] as Alex
 O'Connor humorously called himself after mediating [a debate between
 Richard Dawkins and Jordan Peterson][5]. Seen myself as someone who appreciates a
 good painting, who is enamored with people, who loves *the fluffier things* 
-- maybe even someone who *makes art sometimes*.
+\- maybe even someone who *makes art sometimes*.
 
 Despite this, I've leant into the mechanical and inhuman with all my Greek 
 symbols and abstract pursuits, becoming so joyfully lost in all the playful 
