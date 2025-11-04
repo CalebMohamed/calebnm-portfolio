@@ -1,0 +1,44 @@
+{{ $key := "poemByMD" }}
+{{ if not (site.Store.Get $key) }}
+  {{ $pages := where site.RegularPages "Section" "poems" }}
+  {{ $map := dict }}
+  {{ range $pages }}
+    {{ $md := .Date.Format "01-02" }}        /* month-day key */
+    {{ $existing := index $map $md }}
+    {{ if not $existing }} {{ $existing = slice }} {{ end }}
+    {{ $existing = $existing | append . }}
+    {{ $map = merge $map (dict $md $existing) }}
+  {{ end }}
+  {{/* sort each slice by date desc so newest first */}}
+  {{ range $k, $v := $map }}
+    {{ $map = merge $map (dict $k (sort $v "Date" "desc")) }}
+  {{ end }}
+  {{ site.Store.Set $key $map }}
+{{ end }}
+
+{{/* Use for current page */}}
+{{ $current := . }}
+{{ $map := site.Store.Get $key }}
+{{ $md := $current.Date.Format "01-02" }}
+{{ $list := index $map $md }}
+
+{{/* collect items with year < current year */}}
+{{ $curYear := $current.Date.Format "2006" }}
+{{ $prev := slice }}
+{{ range $list }}
+  {{ if lt (.Date.Format "2006") $curYear }}
+    {{ $prev = $prev | append . }}
+  {{ end }}
+{{ end }}
+
+{{ if gt (len $prev) 0 }}
+  <a class="noline" href="/poems/">
+    <h1>previous poems</h1>
+  </a>
+  <p>Poems written on this day in years gone by:</p>
+  {{ range $prev }}
+    {{ partial "poem" . }}
+  {{ end }}
+{{ else }}
+  <p>no previous poems written on this day.</p>
+{{ end }}
