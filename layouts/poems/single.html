@@ -12,6 +12,9 @@
 </div>
 {{- partial "lastxpoems" 5 -}}
 {{- partial "poemarchives" . -}}
+<div class="generic_section container section">
+  {{ partial "priorpoems" . }}
+</div>
 {{- end -}}
 
 {{- define "linkstack" -}}
