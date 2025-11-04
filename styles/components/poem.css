@@ -7,10 +7,19 @@
   max-width: 60ch;
   color: var(--clr-main);
   scroll-margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: .75rem;
 }
 
 .poem .verse {
   font-size: var(--size-base);
+}
+
+.poem .links {
+  margin-top: -.75rem;
 }
 
 .poem .left-icon,
