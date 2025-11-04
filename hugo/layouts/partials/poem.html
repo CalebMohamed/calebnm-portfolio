@@ -2,22 +2,23 @@
 <div class="poem" id="{{ lower .Title }}">
   {{ .Content }}
   {{- $title := lower .Title -}}
-  <a href="{{ .RelPermalink }}">{{ lower $title }}</a>
-  <p>
-    {{- if .Params.themes -}}
-    <a href="/themes/">themes:</a>
-    {{- range .Params.themes }}
-     <a href="/themes/{{ . }}/#{{ $title }}">{{ . }}</a>
-    {{- end -}}
-    {{- end -}}
-  </p>
-  <p>
-    {{- if .Params.series -}}
-    <a href="/series/">series:</a>
-    {{- range .Params.series }}
-     <a href="/series/{{ . }}/#{{ $title }}">{{ . }}</a>
-    {{- end -}}
-    {{- end -}}
-  </p>
+  <div class="links">
+    <a href="{{ .RelPermalink }}">{{ lower $title }}</a>
+    <p>
+      {{- if .Params.themes -}}
+      <a href="/themes/">themes:</a>
+      {{- range .Params.themes }}
+       <a href="/themes/{{ . }}/#{{ $title }}">{{ . }}</a>
+      {{- end -}}
+      {{- end -}}
+      <br>
+      {{- if .Params.series -}}
+      <a href="/series/">series:</a>
+      {{- range .Params.series }}
+       <a href="/series/{{ . }}/#{{ $title }}">{{ . }}</a>
+      {{- end -}}
+      {{- end -}}
+    </p>
+  </div>
   {{ partial "poemnav" . }}
 </div>
