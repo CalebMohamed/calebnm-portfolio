@@ -1,6 +1,11 @@
 {{- /* the context . should be a string for the bundleKey */ -}}
 
-{{- $manifest := readFile "/static/.vite/manifest.json" | transform.Unmarshal -}}
+{{ $key := "viteManifest" }}
+{{ if not (site.Store.Get $key) }}
+{{ site.Store.Set $key (readFile "/static/.vite/manifest.json" | transform.Unmarshal) }}
+{{ end }}
+
+{{- $manifest := site.Store.Get $key -}}
 {{- $entry := index $manifest (default "src/light.js" .) -}}
 
 {{- /* adds the entry point script */ -}}
