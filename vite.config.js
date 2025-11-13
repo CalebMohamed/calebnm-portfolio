@@ -13,6 +13,9 @@ export default defineConfig({
         },
       }),
     ],
+  server: {
+    open: '/test.html'
+  },
   build: {
     manifest: true,
     outDir: 'hugo/static',

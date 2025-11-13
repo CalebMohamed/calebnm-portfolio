@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en" data-theme="" data-type="base">
+<head>
+  <script>
+    (() => {
+      const saved = localStorage.getItem("theme");
+      if (saved) {
+        document.documentElement.setAttribute("data-theme", saved);
+        return;
+      }
+
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      document.documentElement.setAttribute("data-theme", prefersDark ? "dark" : "light");
+    })();
+  </script>
+  <meta charset="UTF-8" />
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>caleb mohamed - test</title>
+  <link rel="icon" type="image/svg+xml" href="/rose-icon.svg" />
+  <script type="module" src="/src/main.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header container">
+    <a title="home" href="/">
+      <h1>Caleb Mohamed</h1>
+    </a>
+    <a class="header-symbol work" title="work" href="/work/">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+        <path fill-rule="evenodd"
+          d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 6a.75.75 0 0 0-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 0 0 0-1.5h-3.75V6Z"
+          clip-rule="evenodd" />
+      </svg>
+    </a>
+    <a class="header-symbol comp" title="projects" href="/projects/">
+      <svg xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 640 640">
+        <path fill="currentColor"
+          d="M380.8 96C372.7 110.1 368 126.5 368 144L368 160L96 160L96 384L368 384L368 448L96 448C60.7 448 32 419.3 32 384L32 160C32 124.7 60.7 96 96 96L380.8 96zM368 496C368 513.5 372.7 529.9 380.8 544L152 544C138.7 544 128 533.3 128 520C128 506.7 138.7 496 152 496L368 496zM464 96L560 96C586.5 96 608 117.5 608 144L608 496C608 522.5 586.5 544 560 544L464 544C437.5 544 416 522.5 416 496L416 144C416 117.5 437.5 96 464 96zM488 160C474.7 160 464 170.7 464 184C464 197.3 474.7 208 488 208L536 208C549.3 208 560 197.3 560 184C560 170.7 549.3 160 536 160L488 160zM488 256C474.7 256 464 266.7 464 280C464 293.3 474.7 304 488 304L536 304C549.3 304 560 293.3 560 280C560 266.7 549.3 256 536 256L488 256zM544 400C544 382.3 529.7 368 512 368C494.3 368 480 382.3 480 400C480 417.7 494.3 432 512 432C529.7 432 544 417.7 544 400z" />
+      </svg>
+    </a>
+    <a class="header-symbol blog" title="blogs" href="/blogs/">
+      <svg xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 640 640">
+        <path fill="currentColor"
+          d="M432.5 82.3L382.4 132.4L507.7 257.7L557.8 207.6C579.7 185.7 579.7 150.3 557.8 128.4L511.7 82.3C489.8 60.4 454.4 60.4 432.5 82.3zM343.3 161.2L342.8 161.3L198.7 204.5C178.8 210.5 163 225.7 156.4 245.5L67.8 509.8C64.9 518.5 65.9 528 70.3 535.8L225.7 380.4C224.6 376.4 224.1 372.3 224.1 368C224.1 341.5 245.6 320 272.1 320C298.6 320 320.1 341.5 320.1 368C320.1 394.5 298.6 416 272.1 416C267.8 416 263.6 415.4 259.7 414.4L104.3 569.7C112.1 574.1 121.5 575.1 130.3 572.2L394.6 483.6C414.3 477 429.6 461.2 435.6 441.3L478.8 297.2L478.9 296.7L343.4 161.2z" />
+      </svg>
+    </a>
+    <a class="header-symbol about" title="about" href="/about/">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+        <path fill-rule="evenodd"
+          d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z"
+          clip-rule="evenodd" />
+      </svg>
+    </a>
+    <a class="header-text" href="/work/">work</a>
+    <a class="header-text" href="/projects/">projects</a>
+    <a class="header-text" href="/blogs/">blogs</a>
+    <a class="header-text" href="/about">about</a>
+  
+    <a id="theme-toggle" class="header-symbol theme" title="theme">
+      <svg xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 640 640">
+        <path id="sun" fill="currentColor"
+          d="M210.2 53.9C217.6 50.8 226 51.7 232.7 56.1L320.5 114.3L408.3 56.1C415 51.7 423.4 50.9 430.8 53.9C438.2 56.9 443.4 63.5 445 71.3L465.9 174.5L569.1 195.4C576.9 197 583.5 202.4 586.5 209.7C589.5 217 588.7 225.5 584.3 232.2L526.1 320L584.3 407.8C588.7 414.5 589.5 422.9 586.5 430.3C583.5 437.7 576.9 443.1 569.1 444.6L465.8 465.4L445 568.7C443.4 576.5 438 583.1 430.7 586.1C423.4 589.1 414.9 588.3 408.2 583.9L320.4 525.7L232.6 583.9C225.9 588.3 217.5 589.1 210.1 586.1C202.7 583.1 197.3 576.5 195.8 568.7L175 465.4L71.7 444.5C63.9 442.9 57.3 437.5 54.3 430.2C51.3 422.9 52.1 414.4 56.5 407.7L114.7 320L56.5 232.2C52.1 225.5 51.3 217.1 54.3 209.7C57.3 202.3 63.9 196.9 71.7 195.4L175 174.6L195.9 71.3C197.5 63.5 202.9 56.9 210.2 53.9zM239.6 320C239.6 275.6 275.6 239.6 320 239.6C364.4 239.6 400.4 275.6 400.4 320C400.4 364.4 364.4 400.4 320 400.4C275.6 400.4 239.6 364.4 239.6 320zM448.4 320C448.4 249.1 390.9 191.6 320 191.6C249.1 191.6 191.6 249.1 191.6 320C191.6 390.9 249.1 448.4 320 448.4C390.9 448.4 448.4 390.9 448.4 320z" />
+        <path id="moon" fill="currentColor"
+          d="M320 64C178.6 64 64 178.6 64 320C64 461.4 178.6 576 320 576C388.8 576 451.3 548.8 497.3 504.6C504.6 497.6 506.7 486.7 502.6 477.5C498.5 468.3 488.9 462.6 478.8 463.4C473.9 463.8 469 464 464 464C362.4 464 280 381.6 280 280C280 207.9 321.5 145.4 382.1 115.2C391.2 110.7 396.4 100.9 395.2 90.8C394 80.7 386.6 72.5 376.7 70.3C358.4 66.2 339.4 64 320 64z" />
+      </svg>
+    </a>
+    <a class="btn" href="mailto:calebnoahmohamed@gmail.com">contact me</a>
+</div>
+</header>
+<main>
+  <div class="generic_section container section">
+  <h1>test page</h1>
+  <p>After a lot of revisions and tweaks, my blogging system is here.</p>
+  <p>It&rsquo;s a bit of a strange combo, but hear me out: I&rsquo;m using a content-driven static site generator called Hugo to template together each html page, and a js and css bundler typically used for web apps called Vite. I use the template system and the Vite manifest file to hook up the styling and scripts correctly.</p>
+  <p>I got into this strange situation because I started with a purely Vite site, and then realised that it wouldn&rsquo;t be able to handle my blogs that easily. So I looked around and found Hugo. But alas, Vite offered me more control and familiarity for styling and functionality (like the hero section on the home page). What is a man to do?</p>
+  <p>I had this liminal period for a few days where I thought I&rsquo;d keep all blogs and Hugo shennanigans separate and just strap it on like some wordy symbiote. It worked, but I was unsatisfied.</p>
+  <p>After seeing the power and modularity of templates I wanted the headers and footers - and everything that repeated, really - to be in the Hugo system. So I did just that: migrating all handcrafted pages into the template system. Then I slimmed down the Vite so it just bundled together the assets for three different kinds of pages: light, main, and home. Home being separate because of the landing page functionality, and light being a stripped down bundle for the blogs.</p>
+  <p>And voila, now I only have to edit one place and the header updates everywhere, there&rsquo;s way less copy pasting - it&rsquo;s a programmers paradise.</p>
+  <p>It also very happily made me a little more future proof: most of my content is markdown and so will travel with me from platform to platform, and both vite and go are programs that will run for as long as my computer can execute javascript and go.</p>
+  <p>It&rsquo;s also inspired me to stick with markdown for my poems instead of a database. I was thinking of having something dynamic with a database for the poems, but I think that keeping it all markdown and using hugo should keep me lower tech and with less dependencies.</p>
+  <p>Anyways, thanks for reading this rather niche yap about my setup, I&rsquo;m off to continue formatting and tagging my 1000+ poems.</p>
+  <p>@_@</p>
+</main><footer>
+    <div class="linkstack container wide section"><div data-type="base">
+  <h1>/</h1>
+  <p>go home.</p>
+  <a class="link-arrow" href="/">
+    <svg xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 640 640">
+      <path fill="currentColor"
+        d="M566.6 342.6C579.1 330.1 579.1 309.8 566.6 297.3L406.6 137.3C394.1 124.8 373.8 124.8 361.3 137.3C348.8 149.8 348.8 170.1 361.3 182.6L466.7 288L96 288C78.3 288 64 302.3 64 320C64 337.7 78.3 352 96 352L466.7 352L361.3 457.4C348.8 469.9 348.8 490.2 361.3 502.7C373.8 515.2 394.1 515.2 406.6 502.7L566.6 342.7z" />
+    </svg>
+  </a>
+</div>
+<div data-type="base">
+  <h1>/about</h1>
+  <p>find out more about me here.</p>
+  <a class="link-arrow" href="/about/">
+    <svg xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 640 640">
+      <path fill="currentColor"
+        d="M566.6 342.6C579.1 330.1 579.1 309.8 566.6 297.3L406.6 137.3C394.1 124.8 373.8 124.8 361.3 137.3C348.8 149.8 348.8 170.1 361.3 182.6L466.7 288L96 288C78.3 288 64 302.3 64 320C64 337.7 78.3 352 96 352L466.7 352L361.3 457.4C348.8 469.9 348.8 490.2 361.3 502.7C373.8 515.2 394.1 515.2 406.6 502.7L566.6 342.7z" />
+    </svg>
+  </a>
+</div>
+<div data-type="poem">
+  <h1>/poems</h1>
+  <p>for all you word lovers.</p>
+  <a class="link-arrow" href="/poems/">
+    <svg xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 640 640">
+      <path fill="currentColor"
+        d="M566.6 342.6C579.1 330.1 579.1 309.8 566.6 297.3L406.6 137.3C394.1 124.8 373.8 124.8 361.3 137.3C348.8 149.8 348.8 170.1 361.3 182.6L466.7 288L96 288C78.3 288 64 302.3 64 320C64 337.7 78.3 352 96 352L466.7 352L361.3 457.4C348.8 469.9 348.8 490.2 361.3 502.7C373.8 515.2 394.1 515.2 406.6 502.7L566.6 342.7z" />
+    </svg>
+  </a>
+</div>
+<div data-type="comp">
+  <h1>/projects</h1>
+  <p>check out my hobby projects.</p>
+  <a class="link-arrow" href="/projects/">
+    <svg xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 640 640">
+      <path fill="currentColor"
+        d="M566.6 342.6C579.1 330.1 579.1 309.8 566.6 297.3L406.6 137.3C394.1 124.8 373.8 124.8 361.3 137.3C348.8 149.8 348.8 170.1 361.3 182.6L466.7 288L96 288C78.3 288 64 302.3 64 320C64 337.7 78.3 352 96 352L466.7 352L361.3 457.4C348.8 469.9 348.8 490.2 361.3 502.7C373.8 515.2 394.1 515.2 406.6 502.7L566.6 342.7z" />
+    </svg>
+  </a>
+</div>
+<div data-type="work">
+  <h1>/work</h1>
+  <p>see whether i'm a good fit.</p>
+  <a class="link-arrow" href="/work/">
+    <svg xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 640 640">
+      <path fill="currentColor"
+        d="M566.6 342.6C579.1 330.1 579.1 309.8 566.6 297.3L406.6 137.3C394.1 124.8 373.8 124.8 361.3 137.3C348.8 149.8 348.8 170.1 361.3 182.6L466.7 288L96 288C78.3 288 64 302.3 64 320C64 337.7 78.3 352 96 352L466.7 352L361.3 457.4C348.8 469.9 348.8 490.2 361.3 502.7C373.8 515.2 394.1 515.2 406.6 502.7L566.6 342.7z" />
+    </svg>
+  </a>
+</div>
+<div data-type="slash">
+  <h1>/slashes</h1>
+  <p>here's a little map for you.</p>
+  <a class="link-arrow" href="/slashes/">
+    <svg xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 640 640">
+      <path fill="currentColor"
+        d="M566.6 342.6C579.1 330.1 579.1 309.8 566.6 297.3L406.6 137.3C394.1 124.8 373.8 124.8 361.3 137.3C348.8 149.8 348.8 170.1 361.3 182.6L466.7 288L96 288C78.3 288 64 302.3 64 320C64 337.7 78.3 352 96 352L466.7 352L361.3 457.4C348.8 469.9 348.8 490.2 361.3 502.7C373.8 515.2 394.1 515.2 406.6 502.7L566.6 342.7z" />
+    </svg>
+  </a>
+</div>
+</div><div class="footer container wide">
+  <div class="footer-content container">
+    <p><a href="/feeds/blogs/rss.xml">blog feed</a> <a href="/feeds/poems/rss.xml">poem feed</a> <a href="https://aboutfeeds.com">(What is a feed?)</a></p>
+    <a href="mailto:calebnoahmohamed@gmail.com">email me at calebnoahmohamed@gmail.com</a>
+    <p>© 2025 Caleb Mohamed</p>
+    
+    <p>last modified aaaaahahhahhahha</p>
+  </div>
+</div>
+</footer>
+</body>
+
+</html>
