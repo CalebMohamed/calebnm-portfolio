@@ -7,6 +7,7 @@ import '../styles/components/header.css'
 import '../styles/components/footer.css'
 import '../styles/utils.css'
 import './theme-toggle.js'
+import './slide-in.js'
 import * as JU from './jump-up.js'
 
 window.onload = function() {

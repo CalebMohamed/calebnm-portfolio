@@ -23,6 +23,7 @@ export default defineConfig({
       input: {
         home: 'src/home.js',
         main: 'src/main.js',
+        display: 'src/display.js',
         light: 'src/light.js',
         poem: 'src/poem.js',
         error: 'src/error.js',

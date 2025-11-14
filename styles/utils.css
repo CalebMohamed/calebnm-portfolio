@@ -81,6 +81,17 @@
   color: var(--clr-accent2);
 }
 
+.slide-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .5s ease, transform .5s ease;
+}
+
+.slide-in.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 a,
 p,
 ol,
