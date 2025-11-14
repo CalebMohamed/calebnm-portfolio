@@ -8,6 +8,7 @@ import '../styles/components/footer.css'
 import '../styles/utils.css'
 import './theme-toggle.js'
 import './slide-in.js'
+import './mouse-tracker.js'
 import * as JU from './jump-up.js'
 
 window.onload = function() {

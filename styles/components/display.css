@@ -17,6 +17,42 @@
   padding: 0;
 }
 
+.display .mouse-tracker.hover-border{
+  --borderWidth: 4px;
+  background-colour: var(--clr-accent);
+  position: relative;
+  border-radius: 16px;
+
+  &::before{
+    --size: 0;
+    z-index: 1;
+    content: '';
+    position: absolute;
+    left: calc(var(--mx) - .5 * var(--size));
+    top: calc(var(--my) - .5 * var(--size));
+    width: var(--size);
+    height: var(--size);
+    background-image: radial-gradient(circle
+      closest-side,aqua,rgba(0,255,255,.0001));
+    transition: width .2s ease, height .2s ease;
+  }
+
+  &:hover::before{
+    --size: 100px;
+  }
+}
+
+.display .mouse-tracker.hover-border::after {
+  content: '';
+  position: absolute;
+  inset: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  weight: calc(100% + var(--borderWidth) * 2);
+  background: radial-gradient(closest-side at var(--xpos) var(--ypos), var(--clr-accent3), var(--clr-accent2));
+  border-radius: 16px;
+  z-index: -1;
+}
+
 .display .wrapper .text{
   animation: slide-in linear forwards;
   animation-timeline: view();
