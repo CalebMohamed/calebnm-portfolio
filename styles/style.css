@@ -134,12 +134,18 @@ html[data-theme="light"] {
   --clr-bg: var(--clr-light);
   --clr-main: var(--clr-lmain);
   --clr-h1: var(--clr-lh1);
+  --clr-opbg: var(--clr-dark);
+  --clr-opmain: var(--clr-dmain);
+  --clr-oph1: var(--clr-dh1);
 }
 
 html[data-theme="dark"] {
   --clr-bg: var(--clr-dark);
   --clr-main: var(--clr-dmain);
   --clr-h1: var(--clr-dh1);
+  --clr-opbg: var(--clr-light);
+  --clr-opmain: var(--clr-lmain);
+  --clr-oph1: var(--clr-lh1);
 }
 
 /* the default */

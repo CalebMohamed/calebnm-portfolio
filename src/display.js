@@ -1,6 +1,7 @@
 import '../styles/modern-normalize.css'
 import '../styles/style.css'
 import '../styles/components/generic_section.css'
+import '../styles/components/display.css'
 import '../styles/components/linkstack.css'
 import '../styles/components/header.css'
 import '../styles/components/footer.css'
