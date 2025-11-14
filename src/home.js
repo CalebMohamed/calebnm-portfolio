@@ -9,6 +9,7 @@ import '../styles/utils.css'
 import './theme-toggle.js'
 import './landing-cycle.js'
 import './slide-in.js'
+import './mouse-tracker.js'
 import * as LH from './landing-headings.js'
 import * as JU from './jump-up.js'
 
