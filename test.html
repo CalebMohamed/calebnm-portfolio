@@ -74,17 +74,72 @@
 </header>
 <main>
   <div class="generic_section container section">
-  <h1>test page</h1>
+  <h1>test pageheading</h1>
   <p>After a lot of revisions and tweaks, my blogging system is here.</p>
   <p>It&rsquo;s a bit of a strange combo, but hear me out: I&rsquo;m using a content-driven static site generator called Hugo to template together each html page, and a js and css bundler typically used for web apps called Vite. I use the template system and the Vite manifest file to hook up the styling and scripts correctly.</p>
   <p>I got into this strange situation because I started with a purely Vite site, and then realised that it wouldn&rsquo;t be able to handle my blogs that easily. So I looked around and found Hugo. But alas, Vite offered me more control and familiarity for styling and functionality (like the hero section on the home page). What is a man to do?</p>
   <p>I had this liminal period for a few days where I thought I&rsquo;d keep all blogs and Hugo shennanigans separate and just strap it on like some wordy symbiote. It worked, but I was unsatisfied.</p>
+  <h2>test heading two</h2>
   <p>After seeing the power and modularity of templates I wanted the headers and footers - and everything that repeated, really - to be in the Hugo system. So I did just that: migrating all handcrafted pages into the template system. Then I slimmed down the Vite so it just bundled together the assets for three different kinds of pages: light, main, and home. Home being separate because of the landing page functionality, and light being a stripped down bundle for the blogs.</p>
   <p>And voila, now I only have to edit one place and the header updates everywhere, there&rsquo;s way less copy pasting - it&rsquo;s a programmers paradise.</p>
   <p>It also very happily made me a little more future proof: most of my content is markdown and so will travel with me from platform to platform, and both vite and go are programs that will run for as long as my computer can execute javascript and go.</p>
   <p>It&rsquo;s also inspired me to stick with markdown for my poems instead of a database. I was thinking of having something dynamic with a database for the poems, but I think that keeping it all markdown and using hugo should keep me lower tech and with less dependencies.</p>
   <p>Anyways, thanks for reading this rather niche yap about my setup, I&rsquo;m off to continue formatting and tagging my 1000+ poems.</p>
   <p>@_@</p>
+  </div>
+  <div class="display container section">
+    <div class="wrapper" data-type="poem">
+      <div class="geometry">
+        <div class="square"></div>
+        <div class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 640 640">
+            <path fill="currentColor"
+              d="M432.5 82.3L382.4 132.4L507.7 257.7L557.8 207.6C579.7 185.7 579.7 150.3 557.8 128.4L511.7 82.3C489.8 60.4 454.4 60.4 432.5 82.3zM343.3 161.2L342.8 161.3L198.7 204.5C178.8 210.5 163 225.7 156.4 245.5L67.8 509.8C64.9 518.5 65.9 528 70.3 535.8L225.7 380.4C224.6 376.4 224.1 372.3 224.1 368C224.1 341.5 245.6 320 272.1 320C298.6 320 320.1 341.5 320.1 368C320.1 394.5 298.6 416 272.1 416C267.8 416 263.6 415.4 259.7 414.4L104.3 569.7C112.1 574.1 121.5 575.1 130.3 572.2L394.6 483.6C414.3 477 429.6 461.2 435.6 441.3L478.8 297.2L478.9 296.7L343.4 161.2z" />
+          </svg>
+        </div>
+      </div>
+      <div class="text">
+        <h2>Poetry</h2>
+        <p>Poems for ages blah blah blah. Something could be said but I won't - for unspecified reasons that it. You wouldn't understand.</p>
+        <p>Anyways back to what I was saying: blah blah blah. Blah bla-blah blah-blargh.</p>
+      </div>
+    </div>
+    <div class="wrapper" data-type="blog">
+      <div class="text">
+        <h2>Poetry</h2>
+        <p>Poems for ages blah blah blah. Something could be said but I won't - for unspecified reasons that it. You wouldn't understand.</p>
+        <p>Anyways back to what I was saying: blah blah blah. Blah bla-blah blah-<a href="/home/">blargh</a>.</p>
+      </div>
+      <div class="geometry">
+        <div class="square"></div>
+        <div class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 640 640">
+            <path fill="currentColor"
+              d="M432.5 82.3L382.4 132.4L507.7 257.7L557.8 207.6C579.7 185.7 579.7 150.3 557.8 128.4L511.7 82.3C489.8 60.4 454.4 60.4 432.5 82.3zM343.3 161.2L342.8 161.3L198.7 204.5C178.8 210.5 163 225.7 156.4 245.5L67.8 509.8C64.9 518.5 65.9 528 70.3 535.8L225.7 380.4C224.6 376.4 224.1 372.3 224.1 368C224.1 341.5 245.6 320 272.1 320C298.6 320 320.1 341.5 320.1 368C320.1 394.5 298.6 416 272.1 416C267.8 416 263.6 415.4 259.7 414.4L104.3 569.7C112.1 574.1 121.5 575.1 130.3 572.2L394.6 483.6C414.3 477 429.6 461.2 435.6 441.3L478.8 297.2L478.9 296.7L343.4 161.2z" />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper" data-type="game">
+      <div class="geometry">
+        <div class="square"></div>
+        <div class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 640 640">
+            <path fill="currentColor"
+              d="M432.5 82.3L382.4 132.4L507.7 257.7L557.8 207.6C579.7 185.7 579.7 150.3 557.8 128.4L511.7 82.3C489.8 60.4 454.4 60.4 432.5 82.3zM343.3 161.2L342.8 161.3L198.7 204.5C178.8 210.5 163 225.7 156.4 245.5L67.8 509.8C64.9 518.5 65.9 528 70.3 535.8L225.7 380.4C224.6 376.4 224.1 372.3 224.1 368C224.1 341.5 245.6 320 272.1 320C298.6 320 320.1 341.5 320.1 368C320.1 394.5 298.6 416 272.1 416C267.8 416 263.6 415.4 259.7 414.4L104.3 569.7C112.1 574.1 121.5 575.1 130.3 572.2L394.6 483.6C414.3 477 429.6 461.2 435.6 441.3L478.8 297.2L478.9 296.7L343.4 161.2z" />
+          </svg>
+        </div>
+      </div>
+      <div class="text">
+        <h2>Poetry</h2>
+        <p>Poems for ages blah blah blah. Something could be said but I won't - for unspecified reasons that it. You wouldn't understand.</p>
+        <p>Anyways back to what I was saying: blah blah blah. Blah bla-blah blah-blargh.</p>
+      </div>
+    </div>
+  </div>
 </main><footer>
     <div class="linkstack container wide section"><div data-type="base">
   <h1>/</h1>

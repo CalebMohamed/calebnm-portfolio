@@ -1,0 +1,103 @@
+.display {
+  background-color: var(--clr-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.display .wrapper{
+  width: 100%;
+  min-height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-itmes: center;
+  gap: 0;
+  padding: 0;
+}
+
+.display .wrapper .text{
+  flex: 0 0 60%;
+  background-color: var(--clr-accent);
+  border-radius: 16px;
+  padding: 1rem;
+  color: var(--clr-light)
+}
+
+.display .wrapper p{
+  max-width: 60ch;
+}
+
+.display .wrapper .text a{
+  color: var(--clr-accent2);
+  transition: color .2s
+}
+
+.display .wrapper .text a:hover{
+  color: var(--clr-accent3);
+}
+
+.display .wrapper .geometry{
+  flex: 1;
+  position: relative;
+  /* background-color: var(--clr-accent2); */
+  /* border-radius: 16px; */
+}
+
+.display .wrapper .geometry .icon{
+  color: var(--clr-accent);
+  position: absolute;
+  left: 30%; /* since 30% width and want to center + little tweak */
+  bottom: 2rem;
+  width: 50%;
+  height: 50%;
+}
+
+@property --accent-strength{
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 0%;
+}
+
+@property --color-angle{
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 45deg;
+}
+
+.display .wrapper .geometry .square{ 
+  position: absolute;
+  left: 25%; /* since 50% width and want to center */
+  bottom: 2rem;
+  height: 50%;
+  width: 50%;
+  background-image: 
+  repeating-linear-gradient(135deg, var(--clr-dark) 0px, var(--clr-dark) 8px, transparent 8px, transparent 10px),
+  repeating-linear-gradient(75deg, var(--clr-dark) 0px, var(--clr-dark) 8px, transparent 8px, transparent 10px),
+  linear-gradient(var(--color-angle), var(--clr-accent) var(--accent-strength), var(--clr-accent3), var(--clr-light));
+  transition: --accent-strength .5s, --color-angle 1s;
+}
+
+.display .wrapper .geometry:hover {
+  --accent-strength: 33%;
+  --color-angle: 75deg;
+}
+
+/* xs */
+/* @media (min-width: 475px) {} */
+
+/* sm */
+/* @media (min-width: 640px) {} */
+
+/* md */
+/* @media (min-width: 768px) {} */
+
+/* lg */
+/* @media (min-width: 1024px) {} */
+
+/* xl */
+/* @media (min-width: 1280px) {} */
+
+/* 2xl */
+/* @media (min-width: 1536px) {} */
