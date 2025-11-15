@@ -17,44 +17,40 @@
   padding: 0;
 }
 
-/* .display .wrapper .text.mouse-tracker.hover-border{ */
-/*   --borderWidth: 4px; */
-/*   background-colour: var(--clr-accent); */
-/*   position: relative; */
-/*   border-radius: 16px; */
-/**/
-/* } */
-/**/
-/* .display .wrapper .text.mouse-tracker.hover-border::before{ */
-/*     --size: 0; */
-/*     z-index: 1; */
-/*     content: ''; */
-/*     position: absolute; */
-/*     left: calc(var(--mx) - .5 * var(--size)); */
-/*     top: calc(var(--my) - .5 * var(--size)); */
-/*     width: var(--size); */
-/*     height: var(--size); */
-/*     background-image: radial-gradient(circle */
-/*       closest-side,aqua,rgba(0,255,255,.0001)); */
-/*     transition: width .2s ease, height .2s ease; */
-/* } */
-/**/
-/* .display .wrapper .text.mouse-tracker.hover-border:hover::before{ */
-/*     --size: 100px; */
-/* } */
-/**/
-/* .display .mouse-tracker.hover-border::after { */
-/*   content: ''; */
-/*   position: absolute; */
-/*   inset: calc(-1 * var(--borderWidth)); */
-/*   height: calc(100% + var(--borderWidth) * 2); */
-/*   weight: calc(100% + var(--borderWidth) * 2); */
-/*   background: radial-gradient(closest-side at var(--xpos) var(--ypos), var(--clr-accent3), var(--clr-accent2)); */
-/*   border-radius: 16px; */
-/*   z-index: -1; */
-/* } */
+@property --mx {
+  syntax: '<length>';
+  inherits: true;
+  initial-value: 100%;
+}
+@property --my {
+  syntax: '<length>';
+  inherits: true;
+  initial-value: 100%;
+}
 
-.display .wrapper .text{
+.display .hover-border{
+  --borderWidth: 4px;
+  position: relative;
+  border-radius: 16px;
+
+  &::after{
+    content: '';
+    position: absolute;
+    inset: calc(-1 * var(--borderWidth));
+    height: calc(100% + var(--borderWidth) * 2);
+    weight: calc(100% + var(--borderWidth) * 2);
+    background: radial-gradient(farthest-side at 100% 100%, var(--clr-opbg), var(--clr-accent));
+    border-radius: 16px;
+    z-index: -1;
+    transition: --mx .2s ease, --my .2s ease;
+  }
+
+  &:hover::after{
+    background: radial-gradient(farthest-side at var(--mx) var(--my), var(--clr-opbg), var(--clr-accent));
+  }
+}
+
+.display .text{
   animation: slide-in linear forwards;
   animation-timeline: view();
   animation-range: 1rem;
@@ -65,18 +61,28 @@
   color: var(--clr-light)
 }
 
-.display .wrapper p{
-  max-width: 60ch;
+.display .text a h2,
+.display .text a h2:hover{
+  color: var(--clr-light)
 }
 
-.display .wrapper .text strong,
-.display .wrapper .text a{
+.display .text p{
+  max-width: 60ch;
+  pointer-events: none;
+}
+
+.display .text p a {
+  pointer-events: auto;
+}
+
+.display .text strong,
+.display .text a{
   color: var(--clr-accent2);
   transition: color .2s
 }
 
 .display .wrapper .text a:hover{
-  color: var(--clr-accent3);
+  color: var(--clr-opbg);
 }
 
 .display .wrapper .geometry{

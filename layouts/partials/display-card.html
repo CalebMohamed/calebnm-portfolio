@@ -1,0 +1,12 @@
+{{- /* expects a dictionary of a type, ordering (for geom and text), link, title, description, and the name of an icon partial */ -}}
+{{- /* .type, .order, .link, .title, .descr, .iconname */ -}}
+{{- /* .order should be 0 or 1 */ -}}
+<div class="wrapper slide-in" data-type="{{ .type }}">
+  {{ if eq .order 0 }}
+  {{ partial "display-geometry" . }}
+  {{ partial "display-text" . }}
+  {{ else }}
+  {{ partial "display-text" . }}
+  {{ partial "display-geometry" . }}
+  {{ end }}
+</div>

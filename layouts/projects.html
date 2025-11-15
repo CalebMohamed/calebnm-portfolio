@@ -15,39 +15,10 @@
   <p>Here are some of my wordy arts: blogs, poems, and potentially some newsletters in the future!</p>
 </div>
 <div class="display section container">
-  <div class="wrapper slide-in" data-type="poem">
-    <div class="geometry">
-      <a href="/poems/"><div class="square"></div></a>
-      <div class="icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-          <path fill="currentColor"
-            d="M416 64C457 64 496.3 80.3 525.2 109.2L530.7 114.7C559.7 143.7 576 183 576 223.9C576 248 570.3 271.5 559.8 292.7C557.9 296.4 554.5 299.2 550.5 300.4L438.5 334C434.6 335.2 432 338.7 432 342.8C432 347.9 436.1 352 441.2 352L473.4 352C487.7 352 494.8 369.2 484.7 379.3L462.3 401.7C460.4 403.6 458.1 404.9 455.6 405.7L374.6 430C370.7 431.2 368.1 434.7 368.1 438.8C368.1 443.9 372.2 448 377.3 448C390.5 448 396.2 463.7 385.1 470.9C344 497.5 295.8 512 246.1 512L160.1 512L112.1 560C103.3 568.8 88.9 568.8 80.1 560C71.3 551.2 71.3 536.8 80.1 528L320 288C328.8 279.2 328.8 264.8 320 256C311.2 247.2 296.8 247.2 288 256L143.5 400.5C137.8 406.2 128 402.2 128 394.1C128 326.2 155 261.1 203 213.1L306.8 109.2C335.7 80.3 375 64 416 64z"/>
-        </svg>
-      </div>
-    </div>
-    <div class="text">
-      <h2>Poetry</h2>
-      <p>I've been writing daily poems for coming up to 3 years, some of them are good some of them aren't, but
-        there's so many I hope you'll find some that you like. <a href="/poems/">To the poems!</a></p>
-    </div>
-  </div>
-  <div class="wrapper slide-in" data-type="blog">
-    <div class="text">
-      <h2>Blogs</h2>
-      <p>The home of my yap indeed. Perhaps you'll find some wisdom here. I'll probably talk about Christ, tech,
-        writing and whatever else comes to mind. <a href="/poems/">To the blogs!</a></p>
-    </div>
-    <div class="geometry">
-      <a href="/blogs/"><div class="square"></div></a>
-      <div class="icon">
-        <svg xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 640 640">
-          <path fill="currentColor"
-            d="M432.5 82.3L382.4 132.4L507.7 257.7L557.8 207.6C579.7 185.7 579.7 150.3 557.8 128.4L511.7 82.3C489.8 60.4 454.4 60.4 432.5 82.3zM343.3 161.2L342.8 161.3L198.7 204.5C178.8 210.5 163 225.7 156.4 245.5L67.8 509.8C64.9 518.5 65.9 528 70.3 535.8L225.7 380.4C224.6 376.4 224.1 372.3 224.1 368C224.1 341.5 245.6 320 272.1 320C298.6 320 320.1 341.5 320.1 368C320.1 394.5 298.6 416 272.1 416C267.8 416 263.6 415.4 259.7 414.4L104.3 569.7C112.1 574.1 121.5 575.1 130.3 572.2L394.6 483.6C414.3 477 429.6 461.2 435.6 441.3L478.8 297.2L478.9 296.7L343.4 161.2z" />
-        </svg>
-      </div>
-    </div>
-  </div>
+  {{ $descr := "I've been writing daily poems for coming up to 3 years, some of them are good some of them aren't, but there's so many I hope you'll find some that you like. [To the poems!](/poems/)" }} 
+  {{ partial "display-card" (dict "type" "poem" "order" 0 "link" "/poems/" "title" "poetry" "descr" $descr "iconname" "poemicon") }}
+  {{ $descr = "The home of my yap indeed. Perhaps you'll find some wisdom here. I'll probably talk about Christ, tech, writing and whatever else comes to mind. [To the blogs!](/blogs/)" }} 
+  {{ partial "display-card" (dict "type" "blog" "order" 1 "link" "/blogs/" "title" "blogging" "descr" $descr "iconname" "blogicon") }}
 </div>
 <div class="generic_section section container">
   <h1 class="reg-h1">cs projects</h1>
@@ -55,55 +26,11 @@
   <p>A collection of my varied computer science and programming interests.</p>
 </div>
 <div class="display section container">
-  <div class="wrapper slide-in" data-type="comp">
-    <div class="geometry">
-      <a href=""><div class="square"></div></a>
-      <div class="icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
-          <path fill="currentColor"
-            d="M415.9 344L225 344C227.9 408.5 242.2 467.9 262.5 511.4C273.9 535.9 286.2 553.2 297.6 563.8C308.8 574.3 316.5 576 320.5 576C324.5 576 332.2 574.3 343.4 563.8C354.8 553.2 367.1 535.8 378.5 511.4C398.8 467.9 413.1 408.5 416 344zM224.9 296L415.8 296C413 231.5 398.7 172.1 378.4 128.6C367 104.2 354.7 86.8 343.3 76.2C332.1 65.7 324.4 64 320.4 64C316.4 64 308.7 65.7 297.5 76.2C286.1 86.8 273.8 104.2 262.4 128.6C242.1 172.1 227.8 231.5 224.9 296zM176.9 296C180.4 210.4 202.5 130.9 234.8 78.7C142.7 111.3 74.9 195.2 65.5 296L176.9 296zM65.5 344C74.9 444.8 142.7 528.7 234.8 561.3C202.5 509.1 180.4 429.6 176.9 344L65.5 344zM463.9 344C460.4 429.6 438.3 509.1 406 561.3C498.1 528.6 565.9 444.8 575.3 344L463.9 344zM575.3 296C565.9 195.2 498.1 111.3 406 78.7C438.3 130.9 460.4 210.4 463.9 296L575.3 296z"/>
-        </svg>
-      </div>
-    </div>
-    <div class="text">
-      <h2>Web Development</h2>
-      <p>I'm loving this atm, and I talk a little about how I made this website <a
-      href="/blogs/2025/making-this-site/">here</a>. In the future I may link to other 
-    fun web projects I do.</p>
-    </div>
-  </div>
-  <div class="wrapper slide-in" data-type="comp">
-    <div class="text">
-      <h2>Theoretical Interests</h2>
-      <p>A little place to explore my theoretical cs interest.</p>
-      <p><strong>Heads up!</strong> I haven't built this out yet - sorry!. <a href="">To theory!</a></p> 
-    </div>
-    <div class="geometry">
-      <a href=""><div class="square"></div></a>
-      <div class="icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
-          <path fill="currentColor"
-            d="M352 64C352 46.3 337.7 32 320 32C302.3 32 288 46.3 288 64L288 128L192 128C139 128 96 171 96 224L96 448C96 501 139 544 192 544L448 544C501 544 544 501 544 448L544 224C544 171 501 128 448 128L352 128L352 64zM160 432C160 418.7 170.7 408 184 408L216 408C229.3 408 240 418.7 240 432C240 445.3 229.3 456 216 456L184 456C170.7 456 160 445.3 160 432zM280 432C280 418.7 290.7 408 304 408L336 408C349.3 408 360 418.7 360 432C360 445.3 349.3 456 336 456L304 456C290.7 456 280 445.3 280 432zM400 432C400 418.7 410.7 408 424 408L456 408C469.3 408 480 418.7 480 432C480 445.3 469.3 456 456 456L424 456C410.7 456 400 445.3 400 432zM224 240C250.5 240 272 261.5 272 288C272 314.5 250.5 336 224 336C197.5 336 176 314.5 176 288C176 261.5 197.5 240 224 240zM368 288C368 261.5 389.5 240 416 240C442.5 240 464 261.5 464 288C464 314.5 442.5 336 416 336C389.5 336 368 314.5 368 288zM64 288C64 270.3 49.7 256 32 256C14.3 256 0 270.3 0 288L0 384C0 401.7 14.3 416 32 416C49.7 416 64 401.7 64 384L64 288zM608 256C590.3 256 576 270.3 576 288L576 384C576 401.7 590.3 416 608 416C625.7 416 640 401.7 640 384L640 288C640 270.3 625.7 256 608 256z"/>
-        </svg>
-      </div>
-    </div>
-  </div>
-  <div class="wrapper slide-in" data-type="comp">
-    <div class="geometry">
-      <a href=""><div class="square"></div></a>
-      <div class="icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
-          <path fill="currentColor"
-            d="M290.4 70C288.9 66.4 285.4 64 281.5 64L262.5 64C258.6 64 255 66.4 253.6 70L232.9 121.7C229.7 129.7 218.3 129.7 215.1 121.7L194.4 70C192.9 66.4 189.4 64 185.5 64L176 64C149.5 64 128 85.5 128 112L128 320L512 320L512 112C512 85.5 490.5 64 464 64L358.5 64C354.6 64 351 66.4 349.6 70L328.9 121.7C325.7 129.7 314.3 129.7 311.1 121.7L290.4 70zM128 368L128 384C128 419.3 156.7 448 192 448L256 448L256 512C256 547.3 284.7 576 320 576C355.3 576 384 547.3 384 512L384 448L448 448C483.3 448 512 419.3 512 384L512 368L128 368zM320 528C311.2 528 304 520.8 304 512C304 503.2 311.2 496 320 496C328.8 496 336 503.2 336 512C336 520.8 328.8 528 320 528z"/>
-        </svg>
-      </div>
-    </div>
-    <div class="text">
-      <h2>Graphics Programming</h2>
-      <p>Linear algebra gpus and beautiful art... and all in one! I'll showcase some of my
-      adventures in graphics programming and shader art here at some point.</p>
-      <p><strong>Heads up!</strong> I haven't built this out yet - sorry!. <a href="">To graphics!</a></p>
-    </div>
-  </div>
+  {{ $descr = "I'm loving this atm, and I talk a little about how I made this website [here](/blogs/2025/making-this-site/). In the future I may link to other fun web projects I do." }} 
+  {{ partial "display-card" (dict "type" "comp" "order" 0 "link" "" "title" "web development" "descr" $descr "iconname" "webdevicon") }}
+  {{ $descr = "A little place to explore my theoretical computer science interests. **Heads up!** I haven't built this out yet - sorry!. [To theory!]()" }} 
+  {{ partial "display-card" (dict "type" "comp" "order" 1 "link" "" "title" "theoretical" "descr" $descr "iconname" "csicon") }}
+  {{ $descr = "Linear algebra gpus and beautiful art... and all in one! I'll showcase some of my adventures in graphics programming and shader art here at some point. **Heads up!** I haven't built this out yet - sorry!. [To graphics!]()" }} 
+  {{ partial "display-card" (dict "type" "comp" "order" 0 "link" "" "title" "graphics programming" "descr" $descr "iconname" "gpuicon") }}
 </div>
 {{- end -}}

@@ -1,0 +1,8 @@
+{{- /* expects a dictionary of a title, description, and a link */ -}}
+{{- /* .link, .title, .descr */ -}}
+<div class="text mouse-tracker hover-border">
+  <a href="{{ .link }}">
+    <h2>{{ lower .title }}</h2>
+  </a>
+  <p>{{ .descr | markdownify | safeHTML }}</p>
+</div>
