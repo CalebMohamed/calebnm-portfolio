@@ -13,10 +13,6 @@
   margin-bottom: -1rem;
 }
 
-.generic_section h1.fun-h1 {
-  display: none;
-}
-
 .generic_section h2 {
   color: var(--clr-accent);
   font-size: var(--size-lg);
@@ -135,10 +131,6 @@
 @media (min-width: 640px) {
   .generic_section h1.reg-h1 {
     display: none;
-  }
-
-  .generic_section h1.fun-h1 {
-    display: block;
   }
 }
 
