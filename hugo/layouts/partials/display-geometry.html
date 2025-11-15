@@ -1,0 +1,6 @@
+{{- /* expects a dictionary containing the link and the name of an icon partial */ -}}
+{{- /* .link, .iconname */ -}}
+<div class="geometry">
+  <a href="{{ .link }}"><div class="square"></div></a>
+  {{ partial .iconname . }}
+</div>
