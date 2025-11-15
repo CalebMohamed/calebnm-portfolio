@@ -1,27 +1,26 @@
 export function convertHeadingsToSpans() {
-    let headings = document.querySelectorAll('h1, h2');
-    headings.forEach(heading => {
-        let headingText = heading.textContent;
-        // deletes text content and replaces with spans
-        heading.textContent = '';
-        headingText.split('').forEach(char => {
-            let newSpan = document.createElement('span');
-            // add the classes
-            newSpan.className += 'jump_up';
-            if (isVowel(char)){
-                newSpan.className += ' accented';
-            }
-            // adds in invisible i's for the spaces as the spaces are ignored
-            if (char == ' '){
-                newSpan.textContent = 'i';
-                newSpan.style.visibility = 'hidden';
-            } else {
-                newSpan.textContent = char;
-            }
-            // adds the span
-            heading.appendChild(newSpan);
-        });
+  let headings = document.querySelectorAll('h1, h2');
+  headings.forEach(heading => {
+    let headingText = heading.textContent;
+    // deletes text content and replaces with spans
+    heading.textContent = '';
+    heading.className += 'jump-heading';
+    headingText.split(' ').forEach(word => {
+      let wSpan = document.createElement('span');
+      wSpan.className += 'jump-word';
+      word.split('').forEach(char => {
+        let cSpan = document.createElement('span');
+        // add the classes
+        cSpan.className += 'jump_up';
+        if (isVowel(char)){
+            cSpan.className += ' accented';
+        }
+        cSpan.textContent = char;
+        wSpan.appendChild(cSpan);
+      });
+      heading.appendChild(wSpan);
     });
+  });
 }
 
 export function initialiseJumpUpRotations() {

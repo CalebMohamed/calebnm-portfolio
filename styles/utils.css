@@ -62,11 +62,25 @@
   flex: 1;
 }
 
+.jump-heading {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 0ch;
+  /* column-gap: .5ch; */
+  column-gap: .25ch;
+}
+
+.jump-word {
+  display: inline-flex;
+  white-space: nowrap;
+}
+
 .jump_up {
   --random-rotation: 5deg;
   position: relative;
   display: inline-block;
   transition: all .3s ease;
+  line-height: 1;
 }
 
 .accented {

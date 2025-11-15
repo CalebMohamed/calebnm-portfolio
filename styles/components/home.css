@@ -34,7 +34,7 @@
 .home h1 {
   --original-width: 5em;
   --size: var(--size-3xl);
-  display: inline-block;
+  /* display: inline-block; */
   position: relative;
   color: var(--clr-h1);
   font-size: var(--size-3xl);
