@@ -216,6 +216,10 @@
 
 /* lg */
 @media (min-width: 1024px) {
+  .display {
+    gap: 2rem;
+  }
+
   .display .wrapper .geometry a,
   .display .wrapper .geometry .icon{
     --dim: 10rem;
