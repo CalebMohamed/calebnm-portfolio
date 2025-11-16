@@ -91,25 +91,6 @@ html[data-theme="dark"] {
   color: var(--clr-light);
 }
 
-@media (min-width: 340px) {
-  .header .icon {
-    display: block;
-  }
-}
-
-/* i needed a stop gap when <350px because the header looked too bad */
-/* tiny usually from 320px */
-/* @media (max-width: 360px) { */
-/*   .header h1 { */
-/*     font-size: var(--size-lg); */
-/*   } */
-/**/
-/*   .header .btn { */
-/*     font-size: var(--size-xxs); */
-/*   } */
-/* } */
-
-
 /* xs */
 @media (min-width: 475px) {
   .header h1 {
