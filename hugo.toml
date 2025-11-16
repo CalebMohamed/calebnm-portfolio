@@ -5,8 +5,6 @@ publishDir = "../dist"
 enableGitInfo = true
 
 [taxonomies]
-  # themes = "poems/themes"
-  # series = "poems/series"
   themes = "themes"
   series = "series"
 

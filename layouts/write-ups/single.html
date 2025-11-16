@@ -1,0 +1,20 @@
+{{- define "type" -}}blog{{- end -}}
+
+{{- define "main" -}}
+<div class="generic_section container section">
+  <h1>{{ lower .Title }}</h1>
+  {{- $layout := .Site.Params.datelayout -}}
+  <p><strong><em>{{- .Date.Format $layout }}</em></strong>
+    <strong> | </strong> last modified {{ .Lastmod.Format $layout -}}
+  </p>
+  {{ .Content }}
+</div>
+{{- end -}}
+
+{{- define "linkstack" -}}
+{{- partial "homelink" . -}}
+{{- partial "aboutlink" . -}}
+{{- partial "complink" . -}}
+{{- partial "worklink" . -}}
+{{- partial "slashlink" . -}}
+{{- end -}}

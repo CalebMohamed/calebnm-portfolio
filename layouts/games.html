@@ -9,8 +9,8 @@
 
 {{- define "extra" -}}
 <div class="display section container">
-  {{ $descr := "The first game I coded in my year 12 using [greenfoot](https://www.greenfoot.org/door). Retrospective write-up [here]()." }} 
-  {{ partial "display-card" (dict "type" "game" "order" 0 "link" "" "title" "The Showdown: SealLion vs ManBusiness" "descr" $descr "iconname" "workicon") }}
+  {{ $descr := "The first game I coded in my year 12 using [greenfoot](https://www.greenfoot.org/door). Retrospective write-up [here](/write-ups/showdown/)." }} 
+  {{ partial "display-card" (dict "type" "game" "order" 0 "link" "/write-ups/showdown/" "title" "The Showdown: SealLion vs ManBusiness" "descr" $descr "iconname" "workicon") }}
   {{ $descr = "My A Level individual project, made in Godot. It's a 2D action platformer which I am quite happy with. See the writeup and download the executable [here]()." }} 
   {{ partial "display-card" (dict "type" "game" "order" 1 "link" "" "title" "Raging Sands" "descr" $descr "iconname" "thirsticon") }}
   {{ $descr = "A top-down pixel art arena fighter where you pilot a spaceship with movement dependent abilities. Quite WIP because I don't know how to do multiplayer yet." }} 
