@@ -24,7 +24,7 @@ infamous ManBusiness is here to undercut SealLion, establish
 a monopoly, and eventually extort the local populus in his 
 insatiable fiscal conquest. How else are they supposed to 
 settle this if not by firing energy balls at each other in 
-the deep dark ocean.
+the deep dark ocean?
 
 ---
 
@@ -56,3 +56,5 @@ to win the game. Unfortunately, there is no win or lose state,
 the game just freezes when either party runs out of hand-warmers.
 
 Whelp. Thanks for listening to my TED talk.
+
+[1]: https://www.greenfoot.org/door

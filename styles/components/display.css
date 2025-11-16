@@ -38,7 +38,7 @@
     position: absolute;
     inset: calc(-1 * var(--borderWidth));
     height: calc(100% + var(--borderWidth) * 2);
-    weight: calc(100% + var(--borderWidth) * 2);
+    width: calc(100% + var(--borderWidth) * 2);
     background: radial-gradient(farthest-side at 100% 100%, var(--clr-opbg), var(--clr-accent));
     border-radius: 16px;
     z-index: -1;
