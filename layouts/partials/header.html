@@ -2,10 +2,10 @@
   <a title="home" href="/">
     <h1>{{ .Site.Params.author.name }}</h1>
   </a>
-  {{ partial "workicon" (dict "link" "/work") }}
-  {{ partial "compicon" (dict "link" "/comp") }}
-  {{ partial "blogicon" (dict "link" "/blog") }}
-  {{ partial "abouticon" (dict "link" "/about") }}
+  {{ partial "workicon" (dict "link" "/work/") }}
+  {{ partial "compicon" (dict "link" "/projects/") }}
+  {{ partial "blogicon" (dict "link" "/blogs/") }}
+  {{ partial "abouticon" (dict "link" "/about/") }}
   <a class="header-text" href="/work/">work</a>
   <a class="header-text" href="/projects/">projects</a>
   <a class="header-text" href="/blogs/">blogs</a>
