@@ -5,7 +5,8 @@ layout = "games"
     pageKey = "src/main.js"
     colour = "game"
 +++
-This is the home of my games - for now I've just copy
-pasted my old unfinished page underneath this.
-
-THIS PAGE NEEDS MAJOR UPDATING: TRUST NOTHING
+I've redone the visuals of this page, but still haven't
+written any writeups about some of these half finished
+games. I will be doing so in the future though! and also
+potentially adding some more games. Sorry it's not done
+yet, Matthew.

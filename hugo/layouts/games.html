@@ -8,36 +8,14 @@
 {{- end -}}
 
 {{- define "extra" -}}
-<div class="generic_section section container">
-  <h1>gaming upon the games</h1>
-  <p>A collection of my games: some are playable in browser. Enjoy!</p>
-  <div class="display_cards">
-    <div class="display_cards-wrapper accent_card">
-      <h2>The Showdown: SealLion vs ManBusiness</h2>
-      <p>The first game I coded (Scratch when I was 9 doesn't count) in my first year of A Level CS using java in a
-        game-engine called greenfoot. Not playable in web but I'll show screenshots.</p>
-      <p><strong>Heads up!</strong> Page under construction.</p>
-      <a class="btn" href="">Check out the game</a>
-    </div>
-    <div class="display_cards-wrapper plain_card">
-      <h2>RagingSands</h2>
-      <p>My A Level individual project, made in Godot, its a 2D action platformer which I am quite happy with.</p>
-      <p><strong>Heads up!</strong> Page under construction.</p>
-      <a class="btn" href="">Check out the game</a>
-    </div>
-    <div class="display_cards-wrapper accent_card">
-      <h2>Zagged</h2>
-      <p>A WIP top-down pixel art arena fighter where you pilot a spaceship with movement dependent abilities. Also
-        made in godot</p>
-      <p><strong>Heads up!</strong> Page under construction.</p>
-      <a class="btn" href="">Check out the game</a>
-    </div>
-    <div class="display_cards-wrapper plain_card">
-      <h2>STOMMP</h2>
-      <p>A WIP 2D platformer about transfering falling momentum into rising and horizontal to navigate obsticles.</p>
-      <p><strong>Heads up!</strong> Page under construction.</p>
-      <a class="btn" href="">Check out the game</a>
-    </div>
-  </div>
+<div class="display section container">
+  {{ $descr := "The first game I coded in my year 12 using [greenfoot](https://www.greenfoot.org/door). Retrospective write-up [here]()." }} 
+  {{ partial "display-card" (dict "type" "game" "order" 0 "link" "" "title" "The Showdown: SealLion vs ManBusiness" "descr" $descr "iconname" "workicon") }}
+  {{ $descr = "My A Level individual project, made in Godot. It's a 2D action platformer which I am quite happy with. See the writeup and download the executable [here]()." }} 
+  {{ partial "display-card" (dict "type" "game" "order" 1 "link" "" "title" "Raging Sands" "descr" $descr "iconname" "thirsticon") }}
+  {{ $descr = "A top-down pixel art arena fighter where you pilot a spaceship with movement dependent abilities. Quite WIP because I don't know how to do multiplayer yet." }} 
+  {{ partial "display-card" (dict "type" "game" "order" 0 "link" "" "title" "Zagged" "descr" $descr "iconname" "fasticon") }}
+  {{ $descr = "A 2D platformer about transferring falling momentum to navigate obstacles. So WIP it's not playable." }} 
+  {{ partial "display-card" (dict "type" "game" "order" 1 "link" "" "title" "STOMMP" "descr" $descr "iconname" "gameicon") }}
 </div>
 {{- end -}}
