@@ -6,11 +6,16 @@ title = "seallion vs manbusiness // write-up"
   colour = "game"
   pageKey = "src/light.js"
 +++
-I had way too much fun making this. Ok ok - lets get down to business...
+This is a tiny game that I made when learning Java
+in a year 12 computer science class. It was made with
+[greenfoot][1], an educational game-engine for teaching
+people how to program (so no export T-T). It was a very
+simple game with a disproportionately large personality -
+I had way too much fun making it. Ok ok - lets get down to business...
 
 ![title screen, seal stands opposing evil looking business man](/images/games/showdown/title-screen.jpg)
 
-SealLion is an honest hand-warmer merchant in the cold arctic
+SealLion is a hand-warmer merchant in the cold arctic
 ocean. Despite his lack of competition, he is an honest... seal?
 Regardless, he's been supplying hand-warmers to the local
 residents for fair prices since at least the 2000s or something.
@@ -24,12 +29,13 @@ the deep dark ocean.
 ---
 
 SealLion moves around the screen with WASD and incredibly
-slippery movement, having a high time to decelerate probably
-because he's underwater.
+slippery movement, having difficulty decelerating probably
+because he's underwater. (I just wanted an excuse to make
+a more complicated movement system and use acceleration)
 
 ![seal (left) faces off against business man (right) under the ocean](/images/games/showdown/start.jpg)
 
-ManBusiness takes the initiative to fire red homing energy
+ManBusiness takes the initiative to fire homing energy
 balls at SealLion in vollies of 3. SealLion, however, uses 
 the power of local businesses when pressing SPACE to form a
 reflective shield around himself. If timed well the 
@@ -47,6 +53,6 @@ maximum of 3 during the fight.
 
 SealLion needs to deflect 10 projectiles back to ManBusiness
 to win the game. Unfortunately, there is no win or lose state,
-the game just freezes when either party is defeated.
+the game just freezes when either party runs out of hand-warmers.
 
 Whelp. Thanks for listening to my TED talk.
