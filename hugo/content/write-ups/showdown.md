@@ -15,7 +15,7 @@ I had way too much fun making it. Ok ok - lets get down to business...
 
 ![title screen, seal stands opposing evil looking business man](/images/games/showdown/title-screen.jpg)
 
-SealLion is a hand warmer merchant in the cold arctic
+SealLion is a hand-warmer merchant in the cold arctic
 ocean. Despite his lack of competition, he is an honest... seal?
 Regardless, he's been supplying hand warmers to the local
 residents for fair prices since at least the 2000s or something.
