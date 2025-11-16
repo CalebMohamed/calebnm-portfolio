@@ -15,9 +15,9 @@ I had way too much fun making it. Ok ok - lets get down to business...
 
 ![title screen, seal stands opposing evil looking business man](/images/games/showdown/title-screen.jpg)
 
-SealLion is a hand-warmer merchant in the cold arctic
+SealLion is a hand warmer merchant in the cold arctic
 ocean. Despite his lack of competition, he is an honest... seal?
-Regardless, he's been supplying hand-warmers to the local
+Regardless, he's been supplying hand warmers to the local
 residents for fair prices since at least the 2000s or something.
 There's a problem though: a new competitor is in town. The 
 infamous ManBusiness is here to undercut SealLion, establish 
@@ -46,14 +46,14 @@ ManBusiness.
 
 SealLion starts with 3 handwarmers, and loses one each
 time he is hit with an energy ball. He can pick up loose
-hand-warmers which spawn randomly to recover up to a 
+hand warmers which spawn randomly to recover up to a 
 maximum of 3 during the fight.
 
 ![seal beside business man with a handwarmer colinear with them to the top right](/images/games/showdown/hand-warmer.jpg)
 
 SealLion needs to deflect 10 projectiles back to ManBusiness
 to win the game. Unfortunately, there is no win or lose state,
-the game just freezes when either party runs out of hand-warmers.
+the game just freezes when either party runs out of hand warmers.
 
 Whelp. Thanks for listening to my TED talk.
 
