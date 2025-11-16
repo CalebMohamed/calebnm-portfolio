@@ -2,7 +2,7 @@
 title = "games"
 layout = "games"
 [params]
-    pageKey = "src/main.js"
+    pageKey = "src/display.js"
     colour = "game"
 +++
 I've redone the visuals of this page, but still haven't
