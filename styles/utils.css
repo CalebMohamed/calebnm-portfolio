@@ -16,6 +16,14 @@
 /* 2xl */
 /* @media (min-width: 1536px) {} */
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  margin: 0 auto;
+}
+
 .btn {
   display: inline-block;
   font-weight: 600;
@@ -95,6 +103,7 @@
   color: var(--clr-accent2);
 }
 
+
 .slide-in {
   opacity: 0;
   transform: translateY(20px);
@@ -104,6 +113,14 @@
 .slide-in.in-view {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* overrides the slide in */
+@media (prefers-reduced-motion: reduce) {
+  .slide-in{
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .mouse-tracker {
@@ -150,6 +167,10 @@ ul {
   ol,
   ul {
     font-size: var(--size-lg);
+  }
+
+  img {
+    max-width: 80%;
   }
 }
 

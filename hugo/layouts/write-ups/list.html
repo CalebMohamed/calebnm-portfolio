@@ -1,0 +1,18 @@
+{{ define "main" }}
+<div class="generic_section container section">
+  <h1>{{ lower .Title }}</h1>
+  <ul>
+    {{ range .Pages.ByDate.Reverse }}
+    <li><a href="{{ .RelPermalink }}">{{ lower .Title }}</a> ({{ .Date.Format "2 Jan" }})</li>
+    {{ end }}
+  </ul>
+</div>
+{{ end }}
+
+{{- define "linkstack" -}}
+{{- partial "homelink" . -}}
+{{- partial "aboutlink" . -}}
+{{- partial "complink" . -}}
+{{- partial "worklink" . -}}
+{{- partial "slashlink" . -}}
+{{- end -}}
