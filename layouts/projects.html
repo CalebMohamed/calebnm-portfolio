@@ -30,5 +30,7 @@
   {{ partial "display-card" (dict "type" "comp" "order" 1 "link" "" "title" "theoretical" "descr" $descr "iconname" "csicon") }}
   {{ $descr = "Linear algebra gpus and beautiful art... and all in one! I'll showcase some of my adventures in graphics programming and shader art here at some point. **Heads up!** I haven't built this out yet - sorry!. [To graphics!]()" }} 
   {{ partial "display-card" (dict "type" "comp" "order" 0 "link" "" "title" "graphics programming" "descr" $descr "iconname" "gpuicon") }}
+  {{ $descr = "A collection of games that I've made. Some will have write-ups and others will be playable in the future. Check them out [here](/games/)!" }} 
+  {{ partial "display-card" (dict "type" "game" "order" 1 "link" "/games/" "title" "game development" "descr" $descr "iconname" "gameicon") }}
 </div>
 {{- end -}}
