@@ -14,6 +14,6 @@ it's called "slash pages" ([what even is that?!][1]).
 - Green is for computer science projects.
 - Blue is for professional work.
 - Amber is for games.
-- Purple is for these **slash pages!**
+- Purple is for these **slash pages!** (or summary pages which span multiple sections)
 
 [1]: https://slashpages.net/
