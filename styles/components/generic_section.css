@@ -10,7 +10,7 @@
 .generic_section h1 {
   color: var(--clr-h1);
   font-size: var(--size-3xl);
-  margin-bottom: -1rem;
+  margin-bottom: -.75rem;
 }
 
 .generic_section h2 {
