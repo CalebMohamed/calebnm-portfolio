@@ -19,6 +19,7 @@
   color: var(--clr-dh1);
   background-color: var(--clr-accent);
   padding-left: 2rem;
+  padding-top: .25rem;
 }
 
 .linkstack p {
