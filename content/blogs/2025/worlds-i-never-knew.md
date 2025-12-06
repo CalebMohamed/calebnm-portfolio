@@ -1,5 +1,5 @@
 +++
-date = 2025-11-??
+date = 2025-12-07
 draft = true
 title = "worlds-i-never-knew"
 [params]
