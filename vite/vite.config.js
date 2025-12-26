@@ -19,6 +19,7 @@ export default defineConfig({
   build: {
     manifest: true,
     outDir: '../static',
+    emptyOutDir: true,
     rollupOptions: {
       input: {
         home: 'src/home.js',
