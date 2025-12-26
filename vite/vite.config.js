@@ -18,7 +18,7 @@ export default defineConfig({
   },
   build: {
     manifest: true,
-    outDir: 'hugo/static',
+    outDir: '../static',
     rollupOptions: {
       input: {
         home: 'src/home.js',
