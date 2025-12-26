@@ -4,6 +4,18 @@ title = 'caleb mohamed'
 publishDir = "dist"
 enableGitInfo = true
 
+[module]
+  [[module.imports]]
+    path = "github.com/CalebMohamed/calebnm-blogs"
+    [[module.imports.mounts]]
+      source = "."
+      target = "content/blogs"
+  [[module.imports]]
+    path = "github.com/CalebMohamed/calebnm-poems"
+    [[module.imports.mounts]]
+      source = "."
+      target = "content/poems"
+
 [taxonomies]
   themes = "themes"
   series = "series"
